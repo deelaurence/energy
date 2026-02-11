@@ -6,7 +6,7 @@ import { Home, BarChart3, PoundSterling, Route, Target } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const navItems = [
-  { href: '/', icon: Home, label: 'Home' },
+  { href: '/dashboard', icon: Home, label: 'Home' },
   { href: '/scorecard', icon: BarChart3, label: 'Scorecard' },
   { href: '/funding', icon: PoundSterling, label: 'Funding' },
   { href: '/roadmap', icon: Route, label: 'Roadmap' },

@@ -148,7 +148,7 @@ export default function Setup() {
 
             {/* Continue Button */}
             <div className="pt-4">
-              <Link href="/">
+              <Link href="/dashboard">
                 <Button className="w-full h-14 text-base font-semibold bg-[#1a2e2a] hover:bg-[#1a2e2a]/90 text-white rounded-full">
                   Continue
                 </Button>

@@ -8,7 +8,7 @@ import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover
 import { cn } from '@/lib/utils'
 
 const navItems = [
-  { href: '/', icon: Home, label: 'Home' },
+  { href: '/dashboard', icon: Home, label: 'Home' },
   { href: '/scorecard', icon: BarChart3, label: 'Scorecard' },
   { href: '/funding', icon: FileText, label: 'Funding' },
   { href: '/roadmap', icon: Route, label: 'Roadmap' },
