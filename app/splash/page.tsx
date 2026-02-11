@@ -1,0 +1,52 @@
+'use client'
+
+import Link from 'next/link'
+
+export default function Splash() {
+  return (
+    <div className="fixed inset-0 z-[100] overflow-hidden bg-gradient-to-b from-[#0E2F2A] via-[#153D35] to-[#1F6F68]">
+      {/* Subtle network pattern overlay */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-[15%] left-[10%] w-2 h-2 bg-white rounded-full" />
+        <div className="absolute top-[25%] right-[20%] w-1.5 h-1.5 bg-white rounded-full" />
+        <div className="absolute top-[35%] left-[30%] w-1 h-1 bg-white rounded-full" />
+        <div className="absolute top-[20%] right-[40%] w-1.5 h-1.5 bg-white rounded-full" />
+        <div className="absolute top-[30%] left-[60%] w-2 h-2 bg-white rounded-full" />
+        <div className="absolute top-[18%] left-[45%] w-1 h-1 bg-white rounded-full" />
+        <div className="absolute top-[40%] right-[15%] w-1.5 h-1.5 bg-white rounded-full" />
+        <div className="absolute top-[12%] right-[30%] w-1 h-1 bg-white rounded-full" />
+      </div>
+
+      <div className="relative h-full flex flex-col items-center justify-between py-16">
+        {/* Logo Section */}
+        <div className="flex-1 flex flex-col items-center justify-center space-y-4">
+          <div className="flex items-center gap-3">
+            <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-lg">
+              <span className="font-bold text-[#0E2F2A] text-2xl">J</span>
+              <span className="font-bold text-[#CBA052] text-xl">K</span>
+            </div>
+            <span className="text-3xl font-bold text-white">JusKel</span>
+          </div>
+          <p className="text-white/70 text-base">Sustainability Finance Hub</p>
+        </div>
+
+        {/* Businessman placeholder area */}
+        <div className="flex-1 flex items-end justify-center relative w-full">
+          {/* Silhouette placeholder - represents the businessman image */}
+          <div className="relative">
+            <div className="w-64 h-72 bg-gradient-to-t from-[#0E2F2A]/80 to-transparent rounded-t-full flex items-center justify-center">
+              <div className="w-48 h-56 bg-[#1a3a2e] rounded-t-full opacity-60" />
+            </div>
+
+            {/* Start Now Button */}
+            <Link href="/welcome">
+              <div className="absolute bottom-16 right-[-20px] w-28 h-28 bg-white rounded-full flex items-center justify-center shadow-2xl hover:shadow-3xl hover:scale-105 transition-all cursor-pointer">
+                <span className="text-[#1a2e2a] font-bold text-base">Start now</span>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
