@@ -24,51 +24,82 @@ import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 
 const visionStats = [
-  { value: '£150B', label: 'UK green lending market by 2030', icon: PoundSterling },
-  { value: '5.5M', label: 'UK SMEs needing green finance', icon: Building2 },
-  { value: '<10%', label: 'Currently access green products', icon: TrendingUp },
+  { value: '65B+', label: 'Currently valued at £65.25 billion in 2024, and is projected to exceed £208.4 billion by 2030.', icon: PoundSterling },
+  { value: '5.7M', label: 'The UK has an SME market (TAM) of about 5.7 million SMEs', icon: Building2 },
+  { value: '<10%', label: 'ESG adoption is currently below 20% in the UK, EU, USA, and other developed economies; and under 10% in developing economies like Africa and co.', icon: TrendingUp },
   { value: '50%', label: 'Of UK emissions from SMEs', icon: Leaf },
 ]
-
 const features = [
+  // COMING SOON - Core MVP Features
   {
     icon: BarChart3,
-    title: 'AI-Powered ESG Scoring',
-    description: 'Proprietary scoring engine that evaluates financial resilience alongside ESG performance, delivering a single Juskel Score that lenders trust.',
+    title: 'AI-Driven Sustainability Scorecard',
+    description: 'Proprietary engine evaluating financial resilience and ESG performance to deliver a trusted Juskel Score.',
     badge: 'Coming Soon',
   },
   {
     icon: PoundSterling,
-    title: 'Intelligent Funding Matching',
-    description: 'Automatically match SMEs to green loans, grants, and incentives based on their ESG profile — reducing search time from weeks to seconds.',
+    title: 'Funding Match Engine',
+    description: 'Automatically matches SMEs to green loans, grants, and incentives based on their ESG profile in seconds.',
     badge: 'Coming Soon',
   },
   {
     icon: Zap,
-    title: 'Actionable ESG Roadmaps',
-    description: 'AI-generated step-by-step sustainability actions with ROI projections, cost estimates, and direct links to matched funding.',
+    title: 'Dynamic Finance Terms',
+    description: 'Allows programmatic adjustment of interest rates and loan limits as SMEs improve their verified ESG scores.',
     badge: 'Coming Soon',
   },
   {
-    icon: Shield,
-    title: 'Bank-Grade Compliance',
-    description: 'FCA-aligned security, Open Banking integration, and Companies House verification ensure data integrity and regulatory confidence.',
-    badge: 'In Development',
+    icon: BarChart3,
+    title: 'Funding Readiness Dashboard',
+    description: 'At-a-glance view of your score, funding gaps, and the specific steps required to unlock better capital offers.',
+    badge: 'Coming Soon',
+  },
+  {
+    icon: PoundSterling,
+    title: 'ESG Improvement Roadmap',
+    description: 'AI-generated step-by-step sustainability actions with ROI projections and direct links to matched funding.',
+    badge: 'Coming Soon',
+  },
+  {
+    icon: Globe,
+    title: 'Green Readiness Benchmarking',
+    description: 'A lite benchmarking tool to compare your sustainability performance against sector and regional peers.',
+    badge: 'Coming Soon',
+  },
+  {
+    icon: Zap,
+    title: 'ESG Rewards Marketplace',
+    description: 'An integrated incentives and rewards layer for businesses actively meeting sustainability milestones.',
+    badge: 'Coming Soon',
   },
   {
     icon: Globe,
     title: 'Carbon Tracking & Reporting',
-    description: 'Real-time Scope 1, 2, and 3 emissions monitoring with automated reporting that satisfies lender ESG disclosure requirements.',
+    description: 'Real-time Scope 1, 2, and 3 monitoring to satisfy lender and corporate ESG disclosure requirements.',
     badge: 'Coming Soon',
+  },
+
+  // PLANNED - Future Roadmap
+  {
+    icon: Building2,
+    title: 'Enterprise ESG Finance Scorecard',
+    description: 'Advanced sustainability scoring and risk analytics tailored for mid-market and corporate entities.',
+    badge: 'Planned',
+  },
+  {
+    icon: Globe,
+    title: 'Supply-Chain ESG Reporting',
+    description: 'Basic tools for SMEs to track, manage, and report on the environmental impact of their supply chain.',
+    badge: 'Planned',
   },
   {
     icon: Users,
     title: 'Lender Marketplace',
-    description: 'Two-sided platform connecting ESG-ready borrowers with sustainability-focused lenders, creating a new asset class of verified green finance.',
+    description: 'A two-sided platform connecting ESG-ready borrowers with a global network of green-focused lenders.',
     badge: 'Planned',
-  },
-]
-
+  }
+];
 const quotes = [
   {
     quote: 'Sustainability is no longer about doing less harm. It\'s about doing more good.',
@@ -112,11 +143,7 @@ export default function Landing() {
                 Log in
               </Button>
             </Link>
-            <a href="#waitlist">
-              <Button className="text-sm font-semibold bg-[#1a2e2a] hover:bg-[#1a2e2a]/90 text-white rounded-full px-6">
-                Join Waitlist
-              </Button>
-            </a>
+            
           </div>
         </div>
       </nav>
@@ -140,26 +167,21 @@ export default function Landing() {
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
-              Turning ESG Progress
+              Bridging finance 
               <br />
               <span className="bg-gradient-to-r from-[#CBA052] to-[#e8c876] bg-clip-text text-transparent">
-                Into Cheaper Finance
+                and sustainability 
               </span>
             </h1>
 
             <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
-              JusKel is building the AI-driven platform that will connect SME sustainability performance to better lending terms. We&apos;re creating the infrastructure for the &pound;150B UK green finance market.
+              We are building an AI-driven Sustainability Finance Hub, the UK's first platform that combines open banking data, ESG metrics, operational, and supply chain data into a single scorecard for SMEs and Corporates. Our solution is built on three core pillars - SMEs, corporates, and climate fintech, all connected through one integrated sustainability-finance hub.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-              <a href="#waitlist">
-                <Button className="h-14 px-8 text-base font-semibold bg-white text-[#1a2e2a] hover:bg-white/90 rounded-full shadow-lg shadow-black/20 gap-2">
-                  Join the Waitlist
-                  <ArrowRight className="w-5 h-5" />
-                </Button>
-              </a>
+          
               <Link href="/dashboard">
-                <Button variant="outline" className="h-14 px-8 text-base font-semibold border-2 border-white/25 text-white hover:bg-white/10 rounded-full bg-transparent gap-2">
+                <Button variant="outline" className="h-14 px-8 text-base font-semibold bg-white text-[#1a2e2a] hover:bg-white/90 rounded-full shadow-lg shadow-black/20 gap-2">
                   Preview Prototype
                   <ChevronRight className="w-5 h-5" />
                 </Button>
@@ -174,7 +196,7 @@ export default function Landing() {
           </div>
 
           {/* Vision Stats */}
-          <div className="mt-16 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          <div className="mt-16 md:mt-20 grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">
             {visionStats.map((stat) => {
               const Icon = stat.icon
               return (
@@ -216,10 +238,10 @@ export default function Landing() {
                 <span className="text-[#2a7a6e]">Most can&apos;t access it.</span>
               </h2>
               <p className="text-[#6b7c78] leading-relaxed">
-                UK SMEs account for 50% of business emissions but receive less than 10% of green finance. The gap? Lenders can&apos;t verify ESG claims, and SMEs can&apos;t navigate the fragmented funding landscape.
+                UK SMEs face a "broken system" where a lack of guidance and fragmented funding make sustainability difficult to achieve. Even when businesses do improve, traditional credit scoring ignores these real-time environmental gains, meaning sustainability efforts rarely translate into the cheaper finance businesses need to grow.
               </p>
               <p className="text-[#6b7c78] leading-relaxed">
-                JusKel will bridge this gap with verified ESG scoring that lenders trust and AI-powered funding matching that SMEs need.
+                We are an AI-driven platform that unifies financial and ESG data to create a live profile that matches SMEs with the best green loans and grants. By providing a real-time "alternative credit score,".
               </p>
               <div className="inline-flex items-center gap-2 bg-[#e6f2ee] rounded-full px-4 py-2">
                 <Clock className="w-4 h-4 text-[#2a7a6e]" />
@@ -251,6 +273,72 @@ export default function Landing() {
         </div>
       </section>
 
+      {/* Problem Statement */}
+      <section className="py-20 md:py-28 bg-white border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-flex items-center gap-2 bg-white rounded-full px-4 py-1.5 mb-6">
+              <Shield className="w-4 h-4 text-[#d94a4a]" />
+              <span className="text-sm font-semibold text-[#d94a4a]">Problem Statement</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1a2e2a] mb-4">
+              The system is broken.
+              <span className="text-[#2a7a6e]"> Here&apos;s why.</span>
+            </h2>
+            <p className="text-[#6b7c78] text-lg leading-relaxed">
+              Five fundamental barriers prevent sustainability from translating into better financial outcomes for SMEs.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                number: '01',
+                title: 'Sustainability not Visible to Finance',
+                description: 'SMEs are making real progress, but lenders can\u2019t see or trust it.',
+                icon: TrendingUp,
+              },
+              {
+                number: '02',
+                title: 'Poorly Allocated Capital',
+                description: 'Green capital exists, but it doesn\u2019t reach the right businesses at scale.',
+                icon: PoundSterling,
+              },
+              {
+                number: '03',
+                title: 'Mispriced Cost of Capital',
+                description: 'Better sustainability performance rarely leads to better financing terms.',
+                icon: BarChart3,
+              },
+              {
+                number: '04',
+                title: 'Fragmented Data',
+                description: 'ESG, financial, and supply-chain data live in disconnected systems.',
+                icon: Globe,
+              },
+              {
+                number: '05',
+                title: 'Green Funding Inaccessibility',
+                description: 'Grants, incentives, and green finance are complex and inefficient to unlock.',
+                icon: Building2,
+              },
+            ].map((problem) => {
+              const Icon = problem.icon
+              return (
+                <Card key={problem.number} className="relative border-0 bg-white rounded-2xl p-7 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group overflow-hidden">
+                  <div className="absolute top-5 right-5 text-4xl font-bold text-[#F0EDE8] select-none">{problem.number}</div>
+                  <div className="w-12 h-12 bg-[#fce4e4] rounded-xl flex items-center justify-center mb-5 group-hover:bg-[#d94a4a] transition-colors">
+                    <Icon className="w-6 h-6 text-[#d94a4a] group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="text-lg font-bold text-[#1a2e2a] mb-2">{problem.title}</h3>
+                  <p className="text-sm text-[#6b7c78] leading-relaxed">{problem.description}</p>
+                </Card>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Vision Section */}
       <section id="vision" className="py-20 md:py-28 bg-[#F0EDE8]">
         <div className="max-w-7xl mx-auto px-6">
@@ -264,13 +352,23 @@ export default function Landing() {
               <span className="text-[#2a7a6e]"> means better business</span>
             </h2>
             <p className="text-[#6b7c78] text-lg leading-relaxed">
-              We believe every SME should benefit financially from their sustainability efforts. JusKel is being built to make that a reality — connecting ESG progress directly to cheaper, faster finance.
+              A world where sustainability performance directly reduces the cost of capital, improves business outcomes, and becomes the global standard for SME and corporate credit, procurement, and supply chains.
             </p>
+
+            <div className="inline-flex items-center gap-2 bg-white rounded-full px-4 py-1.5  mt-10 mb-6">
+              <Leaf className="w-4 h-4 text-[#2a7a6e]" />
+              <span className="text-sm font-semibold text-[#2a7a6e]">Our Mission</span>
+            </div>
+            <p className="text-[#6b7c78] text-lg leading-relaxed">
+                To make sustainability measurable, accessible, financeable, and profitable for all SMEs and corporates.
+            </p>
+
+            
           </div>
 
           {/* Quote highlight */}
-          <Card className="border-0 bg-gradient-to-br from-[#0E2F2A] to-[#1F6F68] rounded-2xl p-10 md:p-14 text-center max-w-3xl mx-auto">
-            <p className="text-xl md:text-2xl text-white font-medium leading-relaxed italic">
+          <Card className="border-0 bg-gradient-to-br from-[#0E2F2A] to-[#1F6F68] rounded-2xl p-6 md:p-8 text-center max-w-3xl mx-auto">
+            <p className="text-sm md:text-base text-white font-medium leading-relaxed italic">
               &ldquo;The transition to net zero is the greatest commercial opportunity of our time. The businesses that move first will be rewarded with cheaper capital and stronger growth.&rdquo;
             </p>
             <div className="mt-6">
@@ -330,9 +428,9 @@ export default function Landing() {
       <section className="py-20 md:py-28 bg-[#F0EDE8]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 bg-white rounded-full px-4 py-1.5 mb-6">
-              <Clock className="w-4 h-4 text-[#2a7a6e]" />
-              <span className="text-sm font-semibold text-[#2a7a6e]">Coming Soon</span>
+            <div className="inline-flex items-center gap-4 bg-white rounded-full px-4 py-2.5 mb-12">
+              <Clock className="w-8 h-8 text-[#2a7a6e]" />
+              <span className="text-3xl font-semibold text-[#2a7a6e]">Coming Soon</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#1a2e2a] mb-4">
               From signup to savings in minutes
@@ -457,26 +555,6 @@ export default function Landing() {
           <p className="text-[#6b7c78] text-lg max-w-xl mx-auto">
             Join our waitlist to get early access when JusKel launches. Be among the first SMEs to unlock better rates through sustainability.
           </p>
-
-          {/* Email signup */}
-          <div className="max-w-md mx-auto">
-            <div className="flex gap-3">
-              <div className="flex-1 relative">
-                <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#6b7c78]" />
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  className="w-full h-14 pl-12 pr-4 rounded-full border-2 border-[#d5d0c8] bg-[#F0EDE8]/50 text-[#1a2e2a] placeholder:text-[#6b7c78]/60 focus:outline-none focus:ring-2 focus:ring-[#2a7a6e] focus:border-transparent text-sm"
-                />
-              </div>
-              <Button className="h-14 px-6 text-sm font-semibold bg-[#1a2e2a] hover:bg-[#1a2e2a]/90 text-white rounded-full whitespace-nowrap">
-                Join Waitlist
-              </Button>
-            </div>
-            <p className="text-xs text-[#6b7c78] mt-3">
-              No spam, ever. We&apos;ll only email you about the launch.
-            </p>
-          </div>
 
           <div className="flex items-center justify-center gap-6 pt-4 flex-wrap">
             <div className="flex items-center gap-2">
