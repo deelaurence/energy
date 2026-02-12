@@ -24,7 +24,7 @@ import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 
 const visionStats = [
-  { value: '65B+', label: 'Currently valued at £65.25 billion in 2024, and is projected to exceed £208.4 billion by 2030.', icon: PoundSterling },
+  { value: '208B+', label: 'Currently valued at £65.25 billion in 2024, and is projected to exceed £208.4 billion by 2030.', icon: PoundSterling },
   { value: '5.7M', label: 'The UK has an SME market (TAM) of about 5.7 million SMEs', icon: Building2 },
   { value: '<10%', label: 'ESG adoption is currently below 20% in the UK, EU, USA, and other developed economies; and under 10% in developing economies like Africa and co.', icon: TrendingUp },
   { value: '50%', label: 'Of UK emissions from SMEs', icon: Leaf },
@@ -234,14 +234,25 @@ export default function Landing() {
                 <span className="text-sm font-semibold text-[#b8860b]">The Problem We&apos;re Solving</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-[#1a2e2a] leading-tight">
-                5.5M UK SMEs need green finance.<br />
+                5.7M UK SMEs need green finance.<br />
                 <span className="text-[#2a7a6e]">Most can&apos;t access it.</span>
               </h2>
+
+
+
+
+
               <p className="text-[#6b7c78] leading-relaxed">
-                UK SMEs face a "broken system" where a lack of guidance and fragmented funding make sustainability difficult to achieve. Even when businesses do improve, traditional credit scoring ignores these real-time environmental gains, meaning sustainability efforts rarely translate into the cheaper finance businesses need to grow.
+                Across the UK and globally, small and mid-sized businesses are making real progress on sustainability, yet when they apply for finance, that progress often goes unseen. Funding options are fragmented, criteria are unclear, and even when businesses succeed, the cost of capital rarely reflects their sustainability gains.
+
               </p>
               <p className="text-[#6b7c78] leading-relaxed">
-                We are an AI-driven platform that unifies financial and ESG data to create a live profile that matches SMEs with the best green loans and grants. By providing a real-time "alternative credit score,".
+                SMEs are expected to decarbonise, report on sustainability, and grow, but the financial systems they rely on haven’t caught up. Sustainability efforts are hard to prove, lenders still depend on outdated credit models, and real environmental progress is rarely embedded into financing decisions.
+
+              </p>
+              <p className="text-[#6b7c78] leading-relaxed">
+                We are an AI-driven Sustainability Finance Hub that transforms ESG progress into cheaper, faster, and more accessible finance. By integrating open banking insights, verified sustainability metrics, and supply chain data, we create a live, decision-ready financial sustainability profile for each business.
+
               </p>
               <div className="inline-flex items-center gap-2 bg-[#e6f2ee] rounded-full px-4 py-2">
                 <Clock className="w-4 h-4 text-[#2a7a6e]" />
@@ -254,12 +265,12 @@ export default function Landing() {
               <h3 className="text-lg font-semibold mb-6 text-white/80">The Opportunity</h3>
               <div className="space-y-6">
                 <div>
-                  <div className="text-4xl font-bold">&pound;150B</div>
-                  <p className="text-white/60 text-sm mt-1">UK green lending market by 2030</p>
+                  <div className="text-4xl font-bold">&pound;208B+</div>
+                  <p className="text-white/60 text-sm mt-1">Projected green finance market by 2030</p>
                 </div>
                 <div className="h-px bg-white/10" />
                 <div>
-                  <div className="text-4xl font-bold">5.5M</div>
+                  <div className="text-4xl font-bold">5.7M</div>
                   <p className="text-white/60 text-sm mt-1">UK SMEs requiring ESG compliance</p>
                 </div>
                 <div className="h-px bg-white/10" />
