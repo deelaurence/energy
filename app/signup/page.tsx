@@ -6,11 +6,11 @@ import { useRouter } from 'next/navigation'
 import { Eye, EyeOff } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
-export default function Login() {
+export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false)
   const router = useRouter()
 
-  const handleLogin = () => {
+  const handleSignUp = () => {
     router.push('/dashboard')
   }
 
@@ -31,29 +31,29 @@ export default function Login() {
           </Link>
         </div>
 
-        {/* Login Card */}
+        {/* Sign Up Card */}
         <div className="flex-1 bg-white rounded-t-[2rem] px-6 pt-8 pb-12">
           <div className="max-w-md mx-auto space-y-6">
             <div className="text-center space-y-2">
-              <h1 className="text-2xl font-bold text-[#1a2e2a]">Log In</h1>
-              <p className="text-[#6b7c78] text-sm">Create an account or log in to enter</p>
+              <h1 className="text-2xl font-bold text-[#1a2e2a]">Sign Up</h1>
+              <p className="text-[#6b7c78] text-sm">Create an account to get started</p>
             </div>
 
-            {/* Social Login Buttons */}
+            {/* Social Sign Up Buttons */}
             <div className="space-y-3">
               <Button
                 variant="outline"
-                onClick={handleLogin}
+                onClick={handleSignUp}
                 className="w-full h-13 text-base font-medium rounded-xl border-[#d5d0c8] text-[#1a2e2a] bg-white hover:bg-[#F0EDE8]"
               >
-                Login with Companies House
+                Sign up with Companies House
               </Button>
               <Button
                 variant="outline"
-                onClick={handleLogin}
+                onClick={handleSignUp}
                 className="w-full h-13 text-base font-medium rounded-xl border-[#d5d0c8] text-[#1a2e2a] bg-white hover:bg-[#F0EDE8]"
               >
-                Log in with Xero/QuickBooks
+                Sign up with Xero/QuickBooks
               </Button>
             </div>
 
@@ -66,6 +66,15 @@ export default function Login() {
 
             {/* Email/Password Form */}
             <div className="space-y-4">
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-[#1a2e2a]">Full Name</label>
+                <input
+                  type="text"
+                  placeholder="John Doe"
+                  className="w-full h-12 px-4 rounded-xl border border-[#d5d0c8] bg-[#F0EDE8]/50 text-[#1a2e2a] placeholder:text-[#6b7c78]/60 focus:outline-none focus:ring-2 focus:ring-[#2a7a6e] focus:border-transparent text-sm"
+                />
+              </div>
+
               <div className="space-y-2">
                 <label className="text-sm font-medium text-[#1a2e2a]">Email address</label>
                 <input
@@ -93,30 +102,42 @@ export default function Login() {
                 </div>
               </div>
 
-              {/* Remember / Forgot */}
-              <div className="flex items-center justify-between">
-                <label className="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" className="w-4 h-4 rounded border-[#d5d0c8] text-[#2a7a6e] focus:ring-[#2a7a6e]" />
-                  <span className="text-sm text-[#1a2e2a]">Remember me</span>
+              {/* Terms & Conditions */}
+              <div className="flex items-start gap-2">
+                <input type="checkbox" className="w-4 h-4 mt-0.5 rounded border-[#d5d0c8] text-[#2a7a6e] focus:ring-[#2a7a6e]" />
+                <label className="text-sm text-[#1a2e2a]">
+                  I agree to the{' '}
+                  <Link href="#" className="font-medium text-[#2a7a6e] hover:text-[#1F6F68]">
+                    Terms & Conditions
+                  </Link>{' '}
+                  and{' '}
+                  <Link href="#" className="font-medium text-[#2a7a6e] hover:text-[#1F6F68]">
+                    Privacy Policy
+                  </Link>
                 </label>
-                <Link href="#" className="text-sm font-medium text-[#2a7a6e] hover:text-[#1F6F68]">
-                  Forgot password?
-                </Link>
               </div>
 
               {/* Continue Button */}
               <Button
-                onClick={handleLogin}
+                onClick={handleSignUp}
                 className="w-full h-13 text-base font-semibold bg-[#1a2e2a] hover:bg-[#1a2e2a]/90 text-white rounded-full"
               >
-                Continue
+                Create Account
               </Button>
             </div>
 
             {/* Footer */}
-            <p className="text-center text-xs text-[#6b7c78]">
-              Bank-level encryption &middot; FCA-aligned security
-            </p>
+            <div className="space-y-2">
+              <p className="text-center text-xs text-[#6b7c78]">
+                Bank-level encryption &middot; FCA-aligned security
+              </p>
+              <p className="text-center text-sm text-[#6b7c78]">
+                Already have an account?{' '}
+                <Link href="/login" className="font-medium text-[#2a7a6e] hover:text-[#1F6F68]">
+                  Log in
+                </Link>
+              </p>
+            </div>
           </div>
         </div>
       </div>

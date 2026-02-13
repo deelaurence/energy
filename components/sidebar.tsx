@@ -22,16 +22,18 @@ export function Sidebar() {
   return (
     <aside className="hidden md:flex flex-col w-64 bg-sidebar text-sidebar-foreground h-screen sticky top-0">
       {/* Logo */}
-      <div className="p-6 flex items-center gap-3 border-b border-sidebar-border">
-        <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
-          <span className="font-bold text-sidebar-background text-xl">J</span>
-          <span className="font-bold text-accent text-lg">K</span>
+      <Link href="/" className="block">
+        <div className="p-6 flex items-center gap-3 border-b border-sidebar-border hover:bg-white/5 transition-colors cursor-pointer">
+          <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+            <span className="font-bold text-sidebar-background text-xl">J</span>
+            <span className="font-bold text-accent text-lg">K</span>
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="font-bold text-base leading-tight">JusKel</div>
+            <div className="text-xs text-[#CBA052] leading-tight">Sustainability Finance Hub</div>
+          </div>
         </div>
-        <div className="flex-1 min-w-0">
-          <div className="font-bold text-base leading-tight">JusKel</div>
-          <div className="text-xs text-[#CBA052] leading-tight">Sustainability Finance Hub</div>
-        </div>
-      </div>
+      </Link>
 
       {/* Navigation */}
       <nav className="flex-1 p-4 space-y-1">
@@ -106,6 +108,15 @@ export function Sidebar() {
                 <Settings className="w-4 h-4 text-[#6b7c78]" />
                 Settings
               </button>
+              <div className="my-1 h-px bg-gray-100" />
+              <Link href="/" className="block">
+                <button
+                  className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-[#1a2e2a] hover:bg-[#F0EDE8] transition-colors"
+                >
+                  <span className="text-[#6b7c78]">🏠</span>
+                  Visit Landing Page
+                </button>
+              </Link>
               <div className="my-1 h-px bg-gray-100" />
               <button
                 onClick={() => router.push('/login')}

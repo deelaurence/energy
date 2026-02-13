@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { Bell, LogOut, Settings, User } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -60,6 +61,15 @@ export function MobileHeader({ showNotification = true }: MobileHeaderProps) {
                   <Settings className="w-4 h-4 text-[#6b7c78]" />
                   Settings
                 </button>
+                <div className="my-1 h-px bg-gray-100" />
+                <Link href="/" className="block">
+                  <button
+                    className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-[#1a2e2a] hover:bg-[#F0EDE8] transition-colors"
+                  >
+                    <span className="text-[#6b7c78]">🏠</span>
+                    Visit Landing Page
+                  </button>
+                </Link>
                 <div className="my-1 h-px bg-gray-100" />
                 <button
                   onClick={() => router.push('/login')}

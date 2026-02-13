@@ -7,6 +7,14 @@ export default function Welcome() {
   return (
     <div className="fixed inset-0 z-[100] overflow-y-auto bg-[#F0EDE8]">
       <div className="min-h-screen flex flex-col">
+        {/* Back to Landing */}
+        <div className="absolute top-6 left-6 z-20">
+          <Link href="/">
+            <div className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors cursor-pointer">
+              <span className="text-[#1a2e2a] text-xl">←</span>
+            </div>
+          </Link>
+        </div>
         {/* Hero Image Area */}
         <div className="relative h-[55vh] bg-gradient-to-br from-[#0E2F2A] via-[#153D35] to-[#1F6F68] overflow-hidden">
           {/* Decorative elements representing the sustainability cityscape */}

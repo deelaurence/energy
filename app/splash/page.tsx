@@ -5,6 +5,14 @@ import Link from 'next/link'
 export default function Splash() {
   return (
     <div className="fixed inset-0 z-[100] overflow-hidden bg-gradient-to-b from-[#0E2F2A] via-[#153D35] to-[#1F6F68]">
+      {/* Back to Landing */}
+      <div className="absolute top-6 left-6 z-20">
+        <Link href="/">
+          <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-colors cursor-pointer">
+            <span className="text-white text-xl">←</span>
+          </div>
+        </Link>
+      </div>
       {/* Subtle network pattern overlay */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-[15%] left-[10%] w-2 h-2 bg-white rounded-full" />

@@ -24,9 +24,9 @@ import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 
 const visionStats = [
-  { value: '208B+', label: 'Currently valued at £65.25 billion in 2024, and is projected to exceed £208.4 billion by 2030.', icon: PoundSterling },
+  { value: '208B+', label: 'Sustainable finance market in the UK is valued at £65.25 billion in 2024, and is projected to exceed £208.4 billion by 2030', icon: PoundSterling },
   { value: '5.7M', label: 'The UK has an SME market (TAM) of about 5.7 million SMEs', icon: Building2 },
-  { value: '<10%', label: 'ESG adoption is currently below 20% in the UK, EU, USA, and other developed economies; and under 10% in developing economies like Africa and co.', icon: TrendingUp },
+  { value: '<10%', label: 'ESG adoption is currently below 20% in the UK, EU, USA, and other developed economies, and below 10% in emerging markets such as Africa.', icon: TrendingUp },
   { value: '50%', label: 'Of UK emissions from SMEs', icon: Leaf },
 ]
 const features = [
@@ -102,19 +102,14 @@ const features = [
 ];
 const quotes = [
   {
-    quote: 'Sustainability is no longer about doing less harm. It\'s about doing more good.',
-    author: 'Jochen Zeitz',
-    role: 'CEO, Harley-Davidson & Co-Founder, B Team',
-  },
-  {
     quote: 'The cost of inaction on climate change is far greater than the cost of action. Green finance isn\'t charity — it\'s smart economics.',
     author: 'Mark Carney',
     role: 'Former Governor, Bank of England & UN Special Envoy for Climate Action',
   },
   {
-    quote: 'Small businesses are the backbone of every economy. When we make green finance accessible to SMEs, we unlock the greatest lever for change.',
-    author: 'Kristalina Georgieva',
-    role: 'Managing Director, International Monetary Fund',
+    quote: 'The transition to net zero is the greatest commercial opportunity of our time. The businesses that move first will be rewarded with cheaper capital and stronger growth.',
+    author: 'Larry Fink',
+    role: 'CEO, BlackRock',
   },
 ]
 
@@ -143,7 +138,11 @@ export default function Landing() {
                 Log in
               </Button>
             </Link>
-            
+            <Link href="/signup">
+              <Button className="text-sm font-medium bg-[#1a2e2a] hover:bg-[#1a2e2a]/90 text-white">
+                Sign Up
+              </Button>
+            </Link>
           </div>
         </div>
       </nav>
@@ -217,7 +216,7 @@ export default function Landing() {
           <div className="flex items-center justify-center gap-3">
             <Rocket className="w-5 h-5 text-white" />
             <p className="text-center text-sm font-bold text-white">
-              We&apos;re building something transformative. Be the first to know when we launch.
+              We&apos;re building the future of sustainability-linked finance. Early access launching soon.
             </p>
             <Rocket className="w-5 h-5 text-white" />
           </div>
@@ -358,10 +357,7 @@ export default function Landing() {
               <Leaf className="w-4 h-4 text-[#2a7a6e]" />
               <span className="text-sm font-semibold text-[#2a7a6e]">Our Vision</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1a2e2a] mb-4">
-              A world where doing good for the planet
-              <span className="text-[#2a7a6e]"> means better business</span>
-            </h2>
+            
             <p className="text-[#6b7c78] text-lg leading-relaxed">
               A world where sustainability performance directly reduces the cost of capital, improves business outcomes, and becomes the global standard for SME and corporate credit, procurement, and supply chains.
             </p>
@@ -372,6 +368,14 @@ export default function Landing() {
             </div>
             <p className="text-[#6b7c78] text-lg leading-relaxed">
                 To make sustainability measurable, accessible, financeable, and profitable for all SMEs and corporates.
+            </p>
+
+            <div className="inline-flex items-center gap-2 bg-white rounded-full px-4 py-1.5 mt-10 mb-6">
+              <Award className="w-4 h-4 text-[#CBA052]" />
+              <span className="text-sm font-semibold text-[#CBA052]">Our Values</span>
+            </div>
+            <p className="text-[#6b7c78] text-lg leading-relaxed font-medium">
+              Integrity • Interoperability • Accountability • Transparency • Impact
             </p>
 
             
@@ -444,19 +448,19 @@ export default function Landing() {
               <span className="text-3xl font-semibold text-[#2a7a6e]">Coming Soon</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#1a2e2a] mb-4">
-              From signup to savings in minutes
+              From sustainability data to better finance in minutes
             </h2>
             <p className="text-[#6b7c78] text-lg">
-              Our streamlined process will get SMEs scored, matched, and funded faster than any alternative.
+              Designed for lenders, with verified data, transparent scoring, and audit-ready decision trails, so SMEs can access fair, faster, sustainability-linked finance.
             </p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { step: '01', title: 'Connect Data', desc: 'Link Xero, QuickBooks, or Open Banking in one click. Companies House auto-verifies your business.', icon: Building2 },
-              { step: '02', title: 'Get Your Score', desc: 'Our AI will analyse 80+ data points to generate your Juskel ESG Score — trusted by lenders.', icon: BarChart3 },
-              { step: '03', title: 'Match Funding', desc: 'Instantly see green loans, grants, and incentives you qualify for, ranked by match strength.', icon: PoundSterling },
-              { step: '04', title: 'Improve & Save', desc: 'Follow your AI roadmap to boost your score and unlock even better rates over time.', icon: TrendingUp },
+              { step: '01', title: 'Connect Data', desc: 'Securely connect financial, ESG, and operational data with a single click. JusKel verifies and structures your information so it\'s trusted by lenders and funding partners.', icon: Building2 },
+              { step: '02', title: 'Get Your Score', desc: 'Our AI generates a lender-ready sustainability and funding score, built from real business data, not self-reported claims or static ESG checklists.', icon: BarChart3 },
+              { step: '03', title: 'Match Funding', desc: 'Instantly see green loans, grants, and incentives you genuinely qualify for, ranked by eligibility, impact, and pricing fit.', icon: PoundSterling },
+              { step: '04', title: 'Improve & Save', desc: 'Follow a personalised roadmap to strengthen your score, improve sustainability performance, and unlock better financing terms over time.', icon: TrendingUp },
             ].map((item) => {
               const Icon = item.icon
               return (
@@ -482,14 +486,14 @@ export default function Landing() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#1a2e2a] mb-4">
-              Why sustainable finance matters
+              Why leaders agree sustainable finance matters
             </h2>
             <p className="text-[#6b7c78] text-lg">
               Leaders across finance and policy agree — the future belongs to those who act now.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
             {quotes.map((q) => (
               <Card key={q.author} className="border-0 bg-[#F0EDE8] rounded-2xl p-7">
                 <div className="w-8 h-8 bg-[#2a7a6e]/10 rounded-lg flex items-center justify-center mb-4">
@@ -502,6 +506,12 @@ export default function Landing() {
                 </div>
               </Card>
             ))}
+          </div>
+
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-[#1a2e2a] text-lg font-medium leading-relaxed">
+              JusKel exists to turn this consensus into infrastructure, connecting sustainability data directly to real financing decisions for SMEs and lenders.
+            </p>
           </div>
         </div>
       </section>
@@ -521,15 +531,15 @@ export default function Landing() {
               </div>
 
               <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
-                Sneak peek at the platform
+                Preview the JusKel platform
               </h2>
               <p className="text-white/60 text-lg max-w-xl mx-auto">
-                Explore our interactive prototype — see how JusKel will work when it launches, from ESG scoring to funding matches to sustainability roadmaps.
+                Explore our interactive prototype to see how JusKel turns sustainability data into real financing outcomes, from ESG scoring and lender-ready insights to funding matches and actionable improvement roadmaps.
               </p>
 
               <div className="inline-flex items-center gap-2 bg-[#CBA052]/20 border border-[#CBA052]/30 rounded-full px-4 py-1.5">
                 <Clock className="w-3.5 h-3.5 text-[#CBA052]" />
-                <span className="text-xs font-medium text-[#CBA052]">Prototype only — not the final product</span>
+                <span className="text-xs font-medium text-[#CBA052]">Prototype preview — not the final product.</span>
               </div>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
@@ -560,11 +570,15 @@ export default function Landing() {
           </div>
 
           <h2 className="text-3xl md:text-5xl font-bold text-[#1a2e2a] leading-tight">
-            Be the first to access
-            <span className="text-[#2a7a6e]"> the future of green finance</span>
+            Be the first to unlock
+            <span className="text-[#2a7a6e]"> better finance through sustainability</span>
           </h2>
           <p className="text-[#6b7c78] text-lg max-w-xl mx-auto">
-            Join our waitlist to get early access when JusKel launches. Be among the first SMEs to unlock better rates through sustainability.
+            Join the waitlist to get early access when JusKel launches, helping SMEs turn verified sustainability progress into better funding outcomes.
+          </p>
+          
+          <p className="text-[#1a2e2a] text-base font-medium max-w-2xl mx-auto">
+            Built for SMEs. Designed with lenders and real credit workflows in mind.
           </p>
 
           <div className="flex items-center justify-center gap-6 pt-4 flex-wrap">
@@ -598,6 +612,9 @@ export default function Landing() {
               </div>
               <p className="text-sm text-white/50 leading-relaxed">
                 Bridging finance and sustainability for SMEs and corporates.
+              </p>
+              <p className="text-sm text-white/50 leading-relaxed">
+                Built for SMEs, lenders, and regulated financial institutions.
               </p>
               <div className="inline-flex items-center gap-1.5 bg-[#CBA052]/20 rounded-full px-3 py-1">
                 <Rocket className="w-3 h-3 text-[#CBA052]" />
@@ -641,7 +658,7 @@ export default function Landing() {
               </div>
               <div className="flex items-center gap-1.5 bg-white/10 rounded-full px-3 py-1">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#2a7a6e]" />
-                <span className="text-xs text-white/60">FCA aligned</span>
+                <span className="text-xs text-white/60">Designed to align with FCA principles</span>
               </div>
             </div>
           </div>
