@@ -67,6 +67,22 @@ body {
     --sidebar-accent-foreground: 164 34% 15%;
     --sidebar-border: 10 35% 11%;
     --sidebar-ring: 169 44% 35%;
+
+    /* JusKel Brand Colors - Centralized */
+    --color-charcoal-teal: #0E2F2A;
+    --color-dark-teal: #1a2e2a;
+    --color-teal-dark: #153D35;
+    --color-teal-medium: #1F6F68;
+    --color-teal-data: #2a7a6e;
+    --color-teal-light: #e6f2ee;
+    --color-gold-primary: #CBA052;
+    --color-gold-light: #e8c876;
+    --color-text-dark: #1a2e2a;
+    --color-text-body: #6b7c78;
+    --color-text-secondary: #4a5854;
+    --color-border: #d5d0c8;
+    --color-bg-light: #F0EDE8;
+    --color-white: #ffffff;
   }
   .dark {
     /* Dark mode uses Carbon Green-Black for depth */
@@ -102,6 +118,22 @@ body {
     --sidebar-accent-foreground: 164 18% 97%;
     --sidebar-border: 10 35% 11%;
     --sidebar-ring: 38 48% 60%;
+
+    /* JusKel Brand Colors - Dark Mode */
+    --color-charcoal-teal: #0E2F2A;
+    --color-dark-teal: #1a2e2a;
+    --color-teal-dark: #153D35;
+    --color-teal-medium: #1F6F68;
+    --color-teal-data: #2a7a6e;
+    --color-teal-light: #e6f2ee;
+    --color-gold-primary: #CBA052;
+    --color-gold-light: #e8c876;
+    --color-text-dark: #1a2e2a;
+    --color-text-body: #6b7c78;
+    --color-text-secondary: #4a5854;
+    --color-border: #d5d0c8;
+    --color-bg-light: #F0EDE8;
+    --color-white: #ffffff;
   }
 }
 

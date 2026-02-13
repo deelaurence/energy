@@ -5,6 +5,7 @@ import { usePathname, useRouter } from 'next/navigation'
 import { Home, BarChart3, FileText, Route, MoreHorizontal, ChevronDown, LogOut, Settings, User } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover'
+import { Logo } from '@/components/logo'
 import { cn } from '@/lib/utils'
 
 const navItems = [
@@ -20,20 +21,11 @@ export function Sidebar() {
   const router = useRouter()
 
   return (
-    <aside className="hidden md:flex flex-col w-64 bg-sidebar text-sidebar-foreground h-screen sticky top-0">
+    <aside className="hidden bg-[var(--color-charcoal-teal)] md:flex flex-col w-64  text-sidebar-foreground h-screen sticky top-0">
       {/* Logo */}
-      <Link href="/" className="block">
-        <div className="p-6 flex items-center gap-3 border-b border-sidebar-border hover:bg-white/5 transition-colors cursor-pointer">
-          <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
-            <span className="font-bold text-sidebar-background text-xl">J</span>
-            <span className="font-bold text-accent text-lg">K</span>
-          </div>
-          <div className="flex-1 min-w-0">
-            <div className="font-bold text-base leading-tight">JusKel</div>
-            <div className="text-xs text-[#CBA052] leading-tight">Sustainability Finance Hub</div>
-          </div>
-        </div>
-      </Link>
+      <div className="p-6 border-b border-sidebar-border">
+        <Logo href="/" hasBg={true} variant="dark" showText={false} />
+      </div>
 
       {/* Navigation */}
       <nav className="flex-1 p-4 space-y-1">
@@ -83,12 +75,12 @@ export function Sidebar() {
             {/* Profile header */}
             <div className="p-4 border-b border-gray-100">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-[#2a7a6e] rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 bg-[var(--color-teal-data)] rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-[8px] font-bold">GF</span>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-semibold text-[#1a2e2a] truncate">Greenfield Manufacturing</p>
-                  <p className="text-xs text-[#6b7c78]">admin@greenfield.co.uk</p>
+                  <p className="text-sm font-semibold text-[var(--color-text-dark)] truncate">Greenfield Manufacturing</p>
+                  <p className="text-xs text-[var(--color-text-body)]">admin@greenfield.co.uk</p>
                 </div>
               </div>
             </div>
@@ -96,24 +88,24 @@ export function Sidebar() {
             <div className="p-2">
               <button
                 onClick={() => router.push('/more')}
-                className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-[#1a2e2a] hover:bg-[#F0EDE8] transition-colors"
+                className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-[var(--color-text-dark)] hover:bg-[var(--color-bg-light)] transition-colors"
               >
-                <User className="w-4 h-4 text-[#6b7c78]" />
+                <User className="w-4 h-4 text-[var(--color-text-body)]" />
                 Company Profile
               </button>
               <button
                 onClick={() => router.push('/more')}
-                className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-[#1a2e2a] hover:bg-[#F0EDE8] transition-colors"
+                className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-[var(--color-text-dark)] hover:bg-[var(--color-bg-light)] transition-colors"
               >
-                <Settings className="w-4 h-4 text-[#6b7c78]" />
+                <Settings className="w-4 h-4 text-[var(--color-text-body)]" />
                 Settings
               </button>
               <div className="my-1 h-px bg-gray-100" />
               <Link href="/" className="block">
                 <button
-                  className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-[#1a2e2a] hover:bg-[#F0EDE8] transition-colors"
+                  className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-[var(--color-text-dark)] hover:bg-[var(--color-bg-light)] transition-colors"
                 >
-                  <span className="text-[#6b7c78]">🏠</span>
+                  <span className="text-[var(--color-text-body)]">🏠</span>
                   Visit Landing Page
                 </button>
               </Link>

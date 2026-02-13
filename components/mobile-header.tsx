@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { Bell, LogOut, Settings, User } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover'
+import { Logo } from '@/components/logo'
 
 interface MobileHeaderProps {
   title?: string
@@ -15,7 +16,10 @@ export function MobileHeader({ showNotification = true }: MobileHeaderProps) {
   const router = useRouter()
 
   return (
-    <header className="md:hidden sticky top-0 z-50 bg-gradient-to-br from-[#0E2F2A] via-[#153D35] to-[#1F6F68] text-white px-4 pt-4 pb-5">
+    <header className="md:hidden sticky top-0 z-50 bg-gradient-to-br from-[var(--color-charcoal-teal)] via-[#153D35] to-[var(--color-teal-medium)] text-white px-4 pt-4 pb-5">
+      <div className="mb-3">
+        <Logo href="/" hasBg={false} variant="dark" showText={false} />
+      </div>
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-3">
           <Popover>
@@ -36,11 +40,11 @@ export function MobileHeader({ showNotification = true }: MobileHeaderProps) {
               {/* Profile header */}
               <div className="p-4 border-b border-gray-100">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-[#2a7a6e] rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="w-10 h-10 bg-[var(--color-teal-data)] rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-white text-[8px] font-bold">GF</span>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm font-semibold text-[#1a2e2a] truncate">Greenfield Manufacturing</p>
+                    <p className="text-sm font-semibold text-[var(--color-text-dark)] truncate">Greenfield Manufacturing</p>
                     <p className="text-xs text-[#6b7c78]">admin@greenfield.co.uk</p>
                   </div>
                 </div>
@@ -49,24 +53,24 @@ export function MobileHeader({ showNotification = true }: MobileHeaderProps) {
               <div className="p-2">
                 <button
                   onClick={() => router.push('/more')}
-                  className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-[#1a2e2a] hover:bg-[#F0EDE8] transition-colors"
+                  className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-[var(--color-text-dark)] hover:bg-[var(--color-bg-light)] transition-colors"
                 >
-                  <User className="w-4 h-4 text-[#6b7c78]" />
+                  <User className="w-4 h-4 text-[var(--color-text-body)]" />
                   Company Profile
                 </button>
                 <button
                   onClick={() => router.push('/more')}
-                  className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-[#1a2e2a] hover:bg-[#F0EDE8] transition-colors"
+                  className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-[var(--color-text-dark)] hover:bg-[var(--color-bg-light)] transition-colors"
                 >
-                  <Settings className="w-4 h-4 text-[#6b7c78]" />
+                  <Settings className="w-4 h-4 text-[var(--color-text-body)]" />
                   Settings
                 </button>
                 <div className="my-1 h-px bg-gray-100" />
                 <Link href="/" className="block">
                   <button
-                    className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-[#1a2e2a] hover:bg-[#F0EDE8] transition-colors"
+                    className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-[var(--color-text-dark)] hover:bg-[var(--color-bg-light)] transition-colors"
                   >
-                    <span className="text-[#6b7c78]">🏠</span>
+                    <span className="text-[var(--color-text-body)]">🏠</span>
                     Visit Landing Page
                   </button>
                 </Link>

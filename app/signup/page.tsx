@@ -15,15 +15,15 @@ export default function SignUp() {
   }
 
   return (
-    <div className="fixed inset-0 z-[100] overflow-y-auto bg-gradient-to-br from-[#0E2F2A] via-[#153D35] to-[#1F6F68]">
+    <div className="fixed inset-0 z-[100] overflow-y-auto bg-gradient-to-br from-[var(--color-charcoal-teal)] via-[#153D35] to-[var(--color-teal-medium)]">
       <div className="min-h-screen flex flex-col">
         {/* Logo Header */}
         <div className="flex flex-col items-center pt-12 pb-8 px-6">
           <Link href="/" className="flex flex-col items-center">
             <div className="flex items-center gap-3 mb-2 cursor-pointer hover:opacity-80 transition-opacity">
               <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg">
-                <span className="font-bold text-[#0E2F2A] text-xl">J</span>
-                <span className="font-bold text-[#CBA052] text-lg">K</span>
+                <span className="font-bold text-[var(--color-charcoal-teal)] text-xl">J</span>
+                <span className="font-bold text-[var(--color-gold-primary)] text-lg">K</span>
               </div>
               <span className="text-2xl font-bold text-white">JusKel</span>
             </div>
@@ -35,8 +35,8 @@ export default function SignUp() {
         <div className="flex-1 bg-white rounded-t-[2rem] px-6 pt-8 pb-12">
           <div className="max-w-md mx-auto space-y-6">
             <div className="text-center space-y-2">
-              <h1 className="text-2xl font-bold text-[#1a2e2a]">Sign Up</h1>
-              <p className="text-[#6b7c78] text-sm">Create an account to get started</p>
+              <h1 className="text-2xl font-bold text-[var(--color-text-dark)]">Sign Up</h1>
+              <p className="text-[var(--color-text-body)] text-sm">Create an account to get started</p>
             </div>
 
             {/* Social Sign Up Buttons */}
@@ -44,14 +44,14 @@ export default function SignUp() {
               <Button
                 variant="outline"
                 onClick={handleSignUp}
-                className="w-full h-13 text-base font-medium rounded-xl border-[#d5d0c8] text-[#1a2e2a] bg-white hover:bg-[#F0EDE8]"
+                className="w-full h-13 text-base font-medium rounded-xl border-[var(--color-border)] text-[var(--color-text-dark)] bg-white hover:bg-[var(--color-bg-light)]"
               >
                 Sign up with Companies House
               </Button>
               <Button
                 variant="outline"
                 onClick={handleSignUp}
-                className="w-full h-13 text-base font-medium rounded-xl border-[#d5d0c8] text-[#1a2e2a] bg-white hover:bg-[#F0EDE8]"
+                className="w-full h-13 text-base font-medium rounded-xl border-[var(--color-border)] text-[var(--color-text-dark)] bg-white hover:bg-[var(--color-bg-light)]"
               >
                 Sign up with Xero/QuickBooks
               </Button>
@@ -59,43 +59,43 @@ export default function SignUp() {
 
             {/* Divider */}
             <div className="flex items-center gap-4">
-              <div className="flex-1 h-px bg-[#d5d0c8]" />
-              <span className="text-sm text-[#6b7c78]">or</span>
-              <div className="flex-1 h-px bg-[#d5d0c8]" />
+              <div className="flex-1 h-px bg-[var(--color-border)]" />
+              <span className="text-sm text-[var(--color-text-body)]">or</span>
+              <div className="flex-1 h-px bg-[var(--color-border)]" />
             </div>
 
             {/* Email/Password Form */}
             <div className="space-y-4">
               <div className="space-y-2">
-                <label className="text-sm font-medium text-[#1a2e2a]">Full Name</label>
+                <label className="text-sm font-medium text-[var(--color-text-dark)]">Full Name</label>
                 <input
                   type="text"
                   placeholder="John Doe"
-                  className="w-full h-12 px-4 rounded-xl border border-[#d5d0c8] bg-[#F0EDE8]/50 text-[#1a2e2a] placeholder:text-[#6b7c78]/60 focus:outline-none focus:ring-2 focus:ring-[#2a7a6e] focus:border-transparent text-sm"
+                  className="w-full h-12 px-4 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-light)]/50 text-[var(--color-text-dark)] placeholder:text-[var(--color-text-body)]/60 focus:outline-none focus:ring-2 focus:ring-[var(--color-teal-data)] focus:border-transparent text-sm"
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-medium text-[#1a2e2a]">Email address</label>
+                <label className="text-sm font-medium text-[var(--color-text-dark)]">Email address</label>
                 <input
                   type="email"
                   placeholder="username@email.com"
-                  className="w-full h-12 px-4 rounded-xl border border-[#d5d0c8] bg-[#F0EDE8]/50 text-[#1a2e2a] placeholder:text-[#6b7c78]/60 focus:outline-none focus:ring-2 focus:ring-[#2a7a6e] focus:border-transparent text-sm"
+                  className="w-full h-12 px-4 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-light)]/50 text-[var(--color-text-dark)] placeholder:text-[var(--color-text-body)]/60 focus:outline-none focus:ring-2 focus:ring-[var(--color-teal-data)] focus:border-transparent text-sm"
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-medium text-[#1a2e2a]">Password</label>
+                <label className="text-sm font-medium text-[var(--color-text-dark)]">Password</label>
                 <div className="relative">
                   <input
                     type={showPassword ? 'text' : 'password'}
                     placeholder="••••••••"
-                    className="w-full h-12 px-4 pr-12 rounded-xl border border-[#d5d0c8] bg-[#F0EDE8]/50 text-[#1a2e2a] placeholder:text-[#6b7c78]/60 focus:outline-none focus:ring-2 focus:ring-[#2a7a6e] focus:border-transparent text-sm"
+                    className="w-full h-12 px-4 pr-12 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-light)]/50 text-[var(--color-text-dark)] placeholder:text-[var(--color-text-body)]/60 focus:outline-none focus:ring-2 focus:ring-[var(--color-teal-data)] focus:border-transparent text-sm"
                   />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 text-[#6b7c78] hover:text-[#1a2e2a]"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-[var(--color-text-body)] hover:text-[var(--color-text-dark)]"
                   >
                     {showPassword ? <Eye className="w-5 h-5" /> : <EyeOff className="w-5 h-5" />}
                   </button>
@@ -104,14 +104,14 @@ export default function SignUp() {
 
               {/* Terms & Conditions */}
               <div className="flex items-start gap-2">
-                <input type="checkbox" className="w-4 h-4 mt-0.5 rounded border-[#d5d0c8] text-[#2a7a6e] focus:ring-[#2a7a6e]" />
-                <label className="text-sm text-[#1a2e2a]">
+                <input type="checkbox" className="w-4 h-4 mt-0.5 rounded border-[var(--color-border)] text-[var(--color-teal-data)] focus:ring-[var(--color-teal-data)]" />
+                <label className="text-sm text-[var(--color-text-dark)]">
                   I agree to the{' '}
-                  <Link href="#" className="font-medium text-[#2a7a6e] hover:text-[#1F6F68]">
+                  <Link href="#" className="font-medium text-[var(--color-teal-data)] hover:text-[var(--color-teal-medium)]">
                     Terms & Conditions
                   </Link>{' '}
                   and{' '}
-                  <Link href="#" className="font-medium text-[#2a7a6e] hover:text-[#1F6F68]">
+                  <Link href="#" className="font-medium text-[var(--color-teal-data)] hover:text-[var(--color-teal-medium)]">
                     Privacy Policy
                   </Link>
                 </label>
@@ -120,7 +120,7 @@ export default function SignUp() {
               {/* Continue Button */}
               <Button
                 onClick={handleSignUp}
-                className="w-full h-13 text-base font-semibold bg-[#1a2e2a] hover:bg-[#1a2e2a]/90 text-white rounded-full"
+                className="w-full h-13 text-base font-semibold bg-[var(--color-text-dark)] hover:bg-[var(--color-text-dark)]/90 text-white rounded-full"
               >
                 Create Account
               </Button>
@@ -128,12 +128,12 @@ export default function SignUp() {
 
             {/* Footer */}
             <div className="space-y-2">
-              <p className="text-center text-xs text-[#6b7c78]">
+              <p className="text-center text-xs text-[var(--color-text-body)]">
                 Bank-level encryption &middot; FCA-aligned security
               </p>
-              <p className="text-center text-sm text-[#6b7c78]">
+              <p className="text-center text-sm text-[var(--color-text-body)]">
                 Already have an account?{' '}
-                <Link href="/login" className="font-medium text-[#2a7a6e] hover:text-[#1F6F68]">
+                <Link href="/login" className="font-medium text-[var(--color-teal-data)] hover:text-[var(--color-teal-medium)]">
                   Log in
                 </Link>
               </p>

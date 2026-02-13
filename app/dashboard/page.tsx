@@ -6,18 +6,18 @@ import { MobileHeader } from '@/components/mobile-header'
 
 export default function Dashboard() {
   const carbonData = [
-    { month: 'Jan', value: 60, color: '#2a7a6e' },
+    { month: 'Jan', value: 60, color: '#1a2e2a' },
     { month: 'Feb', value: 52, color: '#1a2e2a' },
-    { month: 'Mar', value: 65, color: '#CBA052' },
-    { month: 'Apr', value: 78, color: '#2a7a6e' },
+    { month: 'Mar', value: 65, color: '#1a2e2a' },
+    { month: 'Apr', value: 78, color: '#1a2e2a' },
     { month: 'May', value: 72, color: '#1a2e2a' },
-    { month: 'Jun', value: 92, color: '#4a8fd9' },
-    { month: 'Jul', value: 88, color: '#CBA052' },
+    { month: 'Jun', value: 92, color: '#1a2e2a' },
+    { month: 'Jul', value: 88, color: '#1a2e2a' },
     { month: 'Aug', value: 85, color: '#1a2e2a' },
-    { month: 'Sep', value: 70, color: '#2a7a6e' },
-    { month: 'Oct', value: 58, color: '#4a8fd9' },
+    { month: 'Sep', value: 70, color: '#1a2e2a' },
+    { month: 'Oct', value: 58, color: '#1a2e2a' },
     { month: 'Nov', value: 42, color: '#1a2e2a' },
-    { month: 'Dec', value: 30, color: '#CBA052' },
+    { month: 'Dec', value: 30, color: '#1a2e2a' },
   ]
 
   return (

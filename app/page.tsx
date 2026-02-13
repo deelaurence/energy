@@ -22,6 +22,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
+import { Logo } from '@/components/logo'
 
 const visionStats = [
   { value: '208B+', label: 'Sustainable finance market in the UK is valued at £65.25 billion in 2024, and is projected to exceed £208.4 billion by 2030', icon: PoundSterling },
@@ -59,7 +60,7 @@ const features = [
     icon: PoundSterling,
     title: 'ESG Improvement Roadmap',
     description: 'AI-generated step-by-step sustainability actions with ROI projections and direct links to matched funding.',
-    badge: 'Coming Soon',
+    badge: 'Planned',
   },
   {
     icon: Globe,
@@ -71,13 +72,13 @@ const features = [
     icon: Zap,
     title: 'ESG Rewards Marketplace',
     description: 'An integrated incentives and rewards layer for businesses actively meeting sustainability milestones.',
-    badge: 'Coming Soon',
+    badge: 'Planned',
   },
   {
     icon: Globe,
     title: 'Carbon Tracking & Reporting',
     description: 'Real-time Scope 1, 2, and 3 monitoring to satisfy lender and corporate ESG disclosure requirements.',
-    badge: 'Coming Soon',
+    badge: 'Planned',
   },
 
   // PLANNED - Future Roadmap
@@ -117,29 +118,23 @@ export default function Landing() {
   return (
     <div className="fixed inset-0 z-[100] overflow-y-auto bg-white">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100">
+      <nav className="sticky top-0 z-50 bg-[var(--color-charcoal-teal)] border-b border-[var(--color-border)]">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <div className="w-10 h-10 bg-[#0E2F2A] rounded-xl flex items-center justify-center">
-              <span className="font-bold text-white text-base">J</span>
-              <span className="font-bold text-[#CBA052] text-sm">K</span>
-            </div>
-            <span className="text-xl font-bold text-[#1a2e2a]">JusKel</span>
-          </div>
+          <Logo href="/" showText={true} variant="dark" hasBg={false} />
           <div className="hidden md:flex items-center gap-8">
-            <a href="#vision" className="text-sm font-medium text-[#6b7c78] hover:text-[#1a2e2a] transition-colors">Vision</a>
-            <a href="#platform" className="text-sm font-medium text-[#6b7c78] hover:text-[#1a2e2a] transition-colors">Platform</a>
-            <a href="#market" className="text-sm font-medium text-[#6b7c78] hover:text-[#1a2e2a] transition-colors">Market</a>
-            <a href="#quotes" className="text-sm font-medium text-[#6b7c78] hover:text-[#1a2e2a] transition-colors">Why It Matters</a>
+            <a href="#vision" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Vision</a>
+            <a href="#platform" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Platform</a>
+            <a href="#market" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Market</a>
+            <a href="#quotes" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Why It Matters</a>
           </div>
           <div className="flex items-center gap-3">
             <Link href="/login">
-              <Button variant="ghost" className="text-sm font-medium text-[#1a2e2a] hover:bg-[#F0EDE8]">
+              <Button variant="ghost" className="text-sm font-medium text-white hover:bg-white/10">
                 Log in
               </Button>
             </Link>
             <Link href="/signup">
-              <Button className="text-sm font-medium bg-[#1a2e2a] hover:bg-[#1a2e2a]/90 text-white">
+              <Button className="text-sm font-medium bg-[var(--color-gold-primary)] hover:opacity-90 text-[var(--color-charcoal-teal)] font-semibold">
                 Sign Up
               </Button>
             </Link>
@@ -149,26 +144,26 @@ export default function Landing() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0E2F2A] via-[#153D35] to-[#1F6F68]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-charcoal-teal)] via-[var(--color-charcoal-teal)] to-[var(--color-teal-dark)]" />
         {/* Decorative elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-[10%] w-72 h-72 bg-[#CBA052]/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-[10%] w-96 h-96 bg-[#2a7a6e]/20 rounded-full blur-3xl" />
+          <div className="absolute top-20 left-[10%] w-72 h-72 bg-[var(--color-gold-primary)]/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-[10%] w-96 h-96 bg-[var(--color-teal-data)]/20 rounded-full blur-3xl" />
           <div className="absolute top-40 right-[30%] w-48 h-48 bg-white/5 rounded-full blur-2xl" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 pt-20 pb-24 md:pt-28 md:pb-32">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             {/* Coming Soon Badge */}
-            <div className="inline-flex items-center gap-2 bg-[#CBA052]/20 backdrop-blur-sm border border-[#CBA052]/30 rounded-full px-5 py-2">
-              <Rocket className="w-4 h-4 text-[#CBA052]" />
-              <span className="text-sm font-semibold text-[#CBA052]">Coming Soon — Join the Early Access Waitlist</span>
+            <div className="inline-flex items-center gap-2 bg-[var(--color-gold-primary)]/20 backdrop-blur-sm border border-[var(--color-gold-primary)]/30 rounded-full px-5 py-2">
+              <Rocket className="w-4 h-4 text-[var(--color-gold-primary)]" />
+              <span className="text-sm font-semibold text-[var(--color-gold-primary)]">Coming Soon — Join the Early Access Waitlist</span>
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
               Bridging finance 
               <br />
-              <span className="bg-gradient-to-r from-[#CBA052] to-[#e8c876] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[var(--color-gold-primary)] to-[var(--color-gold-light)] bg-clip-text text-transparent">
                 and sustainability 
               </span>
             </h1>
@@ -180,7 +175,7 @@ export default function Landing() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
           
               <Link href="/dashboard">
-                <Button variant="outline" className="h-14 px-8 text-base font-semibold bg-white text-[#1a2e2a] hover:bg-white/90 rounded-full shadow-lg shadow-black/20 gap-2">
+                <Button variant="outline" className="h-14 px-8 text-base font-semibold bg-white text-[var(--color-text-dark)] hover:bg-white/90 rounded-full shadow-lg shadow-black/20 gap-2">
                   Preview Prototype
                   <ChevronRight className="w-5 h-5" />
                 </Button>
@@ -200,7 +195,7 @@ export default function Landing() {
               const Icon = stat.icon
               return (
                 <div key={stat.label} className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-5 text-center">
-                  <Icon className="w-6 h-6 text-[#CBA052] mx-auto mb-2" />
+                  <Icon className="w-6 h-6 text-[var(--color-gold-primary)] mx-auto mb-2" />
                   <div className="text-2xl md:text-3xl font-bold text-white">{stat.value}</div>
                   <p className="text-sm text-white/60 mt-1">{stat.label}</p>
                 </div>
@@ -211,7 +206,7 @@ export default function Landing() {
       </section>
 
       {/* Coming Soon Banner */}
-      <section className="bg-[#CBA052] py-4">
+      <section className="bg-[var(--color-gold-primary)] py-4">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-center gap-3">
             <Rocket className="w-5 h-5 text-white" />
@@ -260,7 +255,7 @@ export default function Landing() {
             </div>
 
             {/* Market stats card */}
-            <Card className="border-0 bg-gradient-to-br from-[#0E2F2A] to-[#1F6F68] rounded-2xl p-8 text-white">
+            <Card className="border-0 bg-gradient-to-br from-[var(--color-charcoal-teal)] to-[var(--color-teal-medium)] rounded-2xl p-8 text-white">
               <h3 className="text-lg font-semibold mb-6 text-white/80">The Opportunity</h3>
               <div className="space-y-6">
                 <div>
@@ -291,11 +286,11 @@ export default function Landing() {
               <Shield className="w-4 h-4 text-[#d94a4a]" />
               <span className="text-sm font-semibold text-[#d94a4a]">Problem Statement</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1a2e2a] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">
               The system is broken.
-              <span className="text-[#2a7a6e]"> Here&apos;s why.</span>
+              <span className="text-[var(--color-teal-data)]"> Here&apos;s why.</span>
             </h2>
-            <p className="text-[#6b7c78] text-lg leading-relaxed">
+            <p className="text-[var(--color-text-body)] text-lg leading-relaxed">
               Five fundamental barriers prevent sustainability from translating into better financial outcomes for SMEs.
             </p>
           </div>
@@ -336,12 +331,12 @@ export default function Landing() {
               const Icon = problem.icon
               return (
                 <Card key={problem.number} className="relative border-0 bg-white rounded-2xl p-7 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group overflow-hidden">
-                  <div className="absolute top-5 right-5 text-4xl font-bold text-[#F0EDE8] select-none">{problem.number}</div>
+                  <div className="absolute top-5 right-5 text-4xl font-bold text-[var(--color-bg-light)] select-none">{problem.number}</div>
                   <div className="w-12 h-12 bg-[#fce4e4] rounded-xl flex items-center justify-center mb-5 group-hover:bg-[#d94a4a] transition-colors">
                     <Icon className="w-6 h-6 text-[#d94a4a] group-hover:text-white transition-colors" />
                   </div>
-                  <h3 className="text-lg font-bold text-[#1a2e2a] mb-2">{problem.title}</h3>
-                  <p className="text-sm text-[#6b7c78] leading-relaxed">{problem.description}</p>
+                  <h3 className="text-lg font-bold text-[var(--color-text-dark)] mb-2">{problem.title}</h3>
+                  <p className="text-sm text-[var(--color-text-body)] leading-relaxed">{problem.description}</p>
                 </Card>
               )
             })}
@@ -350,7 +345,7 @@ export default function Landing() {
       </section>
 
       {/* Vision Section */}
-      <section id="vision" className="py-20 md:py-28 bg-[#F0EDE8]">
+      <section id="vision" className="py-20 md:py-28 bg-[var(--color-bg-light)]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 bg-white rounded-full px-4 py-1.5 mb-6">
@@ -363,18 +358,18 @@ export default function Landing() {
             </p>
 
             <div className="inline-flex items-center gap-2 bg-white rounded-full px-4 py-1.5  mt-10 mb-6">
-              <Leaf className="w-4 h-4 text-[#2a7a6e]" />
-              <span className="text-sm font-semibold text-[#2a7a6e]">Our Mission</span>
+              <Leaf className="w-4 h-4 text-[var(--color-teal-data)]" />
+              <span className="text-sm font-semibold text-[var(--color-teal-data)]">Our Vision</span>
             </div>
-            <p className="text-[#6b7c78] text-lg leading-relaxed">
+            <p className="text-[var(--color-text-body)] text-lg leading-relaxed">
                 To make sustainability measurable, accessible, financeable, and profitable for all SMEs and corporates.
             </p>
 
             <div className="inline-flex items-center gap-2 bg-white rounded-full px-4 py-1.5 mt-10 mb-6">
-              <Award className="w-4 h-4 text-[#CBA052]" />
-              <span className="text-sm font-semibold text-[#CBA052]">Our Values</span>
+              <Award className="w-4 h-4 text-[var(--color-gold-primary)]" />
+              <span className="text-sm font-semibold text-[var(--color-gold-primary)]">Our Values</span>
             </div>
-            <p className="text-[#6b7c78] text-lg leading-relaxed font-medium">
+            <p className="text-[var(--color-text-body)] text-lg leading-relaxed font-medium">
               Integrity • Interoperability • Accountability • Transparency • Impact
             </p>
 
@@ -382,12 +377,12 @@ export default function Landing() {
           </div>
 
           {/* Quote highlight */}
-          <Card className="border-0 bg-gradient-to-br from-[#0E2F2A] to-[#1F6F68] rounded-2xl p-6 md:p-8 text-center max-w-3xl mx-auto">
+          <Card className="border-0 bg-gradient-to-br from-[var(--color-charcoal-teal)] to-[var(--color-teal-medium)] rounded-2xl p-6 md:p-8 text-center max-w-3xl mx-auto">
             <p className="text-sm md:text-base text-white font-medium leading-relaxed italic">
               &ldquo;The transition to net zero is the greatest commercial opportunity of our time. The businesses that move first will be rewarded with cheaper capital and stronger growth.&rdquo;
             </p>
             <div className="mt-6">
-              <p className="font-bold text-[#CBA052]">Larry Fink</p>
+              <p className="font-bold text-[var(--color-gold-primary)]">Larry Fink</p>
               <p className="text-sm text-white/50">CEO, BlackRock</p>
             </div>
           </Card>
@@ -399,13 +394,13 @@ export default function Landing() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 bg-[#fef9e7] rounded-full px-4 py-1.5 mb-6">
-              <Zap className="w-4 h-4 text-[#CBA052]" />
+              <Zap className="w-4 h-4 text-[var(--color-gold-primary)]" />
               <span className="text-sm font-semibold text-[#b8860b]">Coming Soon</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1a2e2a] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">
               The full stack for sustainable finance
             </h2>
-            <p className="text-[#6b7c78] text-lg">
+            <p className="text-[var(--color-text-body)] text-lg">
               Everything SMEs and lenders will need to connect ESG performance with better financial outcomes.
             </p>
           </div>
@@ -414,24 +409,24 @@ export default function Landing() {
             {features.map((feature) => {
               const Icon = feature.icon
               return (
-                <Card key={feature.title} className="relative border-0 bg-[#F0EDE8] rounded-2xl p-7 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group overflow-hidden">
+                <Card key={feature.title} className="relative border-0 bg-[var(--color-bg-light)] rounded-2xl p-7 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 group overflow-hidden">
                   {/* Coming Soon badge */}
                   <div className="absolute top-4 right-4">
                     <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${
                       feature.badge === 'Planned'
-                        ? 'bg-[#6b7c78]/10 text-[#6b7c78]'
+                        ? 'bg-[var(--color-text-body)]/10 text-[var(--color-text-body)]'
                         : feature.badge === 'In Development'
-                        ? 'bg-[#e6f2ee] text-[#2a7a6e]'
+                        ? 'bg-[var(--color-light-teal)] text-[var(--color-teal-data)]'
                         : 'bg-[#fef9e7] text-[#b8860b]'
                     }`}>
                       {feature.badge}
                     </span>
                   </div>
-                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-5 group-hover:bg-[#2a7a6e] transition-colors">
-                    <Icon className="w-6 h-6 text-[#2a7a6e] group-hover:text-white transition-colors" />
+                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-5 group-hover:bg-[var(--color-teal-data)] transition-colors">
+                    <Icon className="w-6 h-6 text-[var(--color-teal-data)] group-hover:text-white transition-colors" />
                   </div>
-                  <h3 className="text-lg font-bold text-[#1a2e2a] mb-2">{feature.title}</h3>
-                  <p className="text-sm text-[#6b7c78] leading-relaxed">{feature.description}</p>
+                  <h3 className="text-lg font-bold text-[var(--color-text-dark)] mb-2">{feature.title}</h3>
+                  <p className="text-sm text-[var(--color-text-body)] leading-relaxed">{feature.description}</p>
                 </Card>
               )
             })}
@@ -440,17 +435,17 @@ export default function Landing() {
       </section>
 
       {/* How It Will Work */}
-      <section className="py-20 md:py-28 bg-[#F0EDE8]">
+      <section className="py-20 md:py-28 bg-[var(--color-bg-light)]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="inline-flex items-center gap-4 bg-white rounded-full px-4 py-2.5 mb-12">
-              <Clock className="w-8 h-8 text-[#2a7a6e]" />
-              <span className="text-3xl font-semibold text-[#2a7a6e]">Coming Soon</span>
+              <Clock className="w-8 h-8 text-[var(--color-teal-data)]" />
+              <span className="text-3xl font-semibold text-[var(--color-teal-data)]">Coming Soon</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1a2e2a] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">
               From sustainability data to better finance in minutes
             </h2>
-            <p className="text-[#6b7c78] text-lg">
+            <p className="text-[var(--color-text-body)] text-lg">
               Designed for lenders, with verified data, transparent scoring, and audit-ready decision trails, so SMEs can access fair, faster, sustainability-linked finance.
             </p>
           </div>
@@ -466,14 +461,14 @@ export default function Landing() {
               return (
                 <div key={item.step} className="text-center space-y-4">
                   <div className="relative mx-auto w-16 h-16">
-                    <div className="absolute inset-0 bg-[#2a7a6e]/10 rounded-2xl rotate-6" />
-                    <div className="relative w-16 h-16 bg-white border-2 border-[#2a7a6e]/20 rounded-2xl flex items-center justify-center">
-                      <Icon className="w-7 h-7 text-[#2a7a6e]" />
+                    <div className="absolute inset-0 bg-[var(--color-teal-data)]/10 rounded-2xl rotate-6" />
+                    <div className="relative w-16 h-16 bg-white border-2 border-[var(--color-teal-data)]/20 rounded-2xl flex items-center justify-center">
+                      <Icon className="w-7 h-7 text-[var(--color-teal-data)]" />
                     </div>
                   </div>
-                  <div className="text-xs font-bold text-[#CBA052] uppercase tracking-widest">Step {item.step}</div>
-                  <h3 className="text-lg font-bold text-[#1a2e2a]">{item.title}</h3>
-                  <p className="text-sm text-[#6b7c78] leading-relaxed">{item.desc}</p>
+                  <div className="text-xs font-bold text-[var(--color-gold-primary)] uppercase tracking-widest">Step {item.step}</div>
+                  <h3 className="text-lg font-bold text-[var(--color-text-dark)]">{item.title}</h3>
+                  <p className="text-sm text-[var(--color-text-body)] leading-relaxed">{item.desc}</p>
                 </div>
               )
             })}
@@ -485,31 +480,31 @@ export default function Landing() {
       <section id="quotes" className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1a2e2a] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">
               Why leaders agree sustainable finance matters
             </h2>
-            <p className="text-[#6b7c78] text-lg">
+            <p className="text-[var(--color-text-body)] text-lg">
               Leaders across finance and policy agree — the future belongs to those who act now.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
             {quotes.map((q) => (
-              <Card key={q.author} className="border-0 bg-[#F0EDE8] rounded-2xl p-7">
-                <div className="w-8 h-8 bg-[#2a7a6e]/10 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-2xl text-[#2a7a6e] font-serif leading-none">&ldquo;</span>
+              <Card key={q.author} className="border-0 bg-[var(--color-bg-light)] rounded-2xl p-7">
+                <div className="w-8 h-8 bg-[var(--color-teal-data)]/10 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-2xl text-[var(--color-teal-data)] font-serif leading-none">&ldquo;</span>
                 </div>
-                <p className="text-[#1a2e2a] leading-relaxed mb-6 italic">&ldquo;{q.quote}&rdquo;</p>
+                <p className="text-[var(--color-text-dark)] leading-relaxed mb-6 italic">&ldquo;{q.quote}&rdquo;</p>
                 <div>
-                  <p className="font-bold text-[#1a2e2a] text-sm">{q.author}</p>
-                  <p className="text-xs text-[#6b7c78]">{q.role}</p>
+                  <p className="font-bold text-[var(--color-text-dark)] text-sm">{q.author}</p>
+                  <p className="text-xs text-[var(--color-text-body)]">{q.role}</p>
                 </div>
               </Card>
             ))}
           </div>
 
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-[#1a2e2a] text-lg font-medium leading-relaxed">
+            <p className="text-[var(--color-text-dark)] text-lg font-medium leading-relaxed">
               JusKel exists to turn this consensus into infrastructure, connecting sustainability data directly to real financing decisions for SMEs and lenders.
             </p>
           </div>
@@ -517,16 +512,16 @@ export default function Landing() {
       </section>
 
       {/* Product Preview */}
-      <section className="py-20 md:py-28 bg-[#F0EDE8]">
+      <section className="py-20 md:py-28 bg-[var(--color-bg-light)]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-gradient-to-br from-[#0E2F2A] to-[#1F6F68] rounded-3xl p-8 md:p-16 text-center relative overflow-hidden">
+          <div className="bg-gradient-to-br from-[var(--color-charcoal-teal)] to-[var(--color-teal-medium)] rounded-3xl p-8 md:p-16 text-center relative overflow-hidden">
             {/* Decorative */}
-            <div className="absolute top-10 left-10 w-40 h-40 bg-[#CBA052]/10 rounded-full blur-3xl" />
+            <div className="absolute top-10 left-10 w-40 h-40 bg-[var(--color-gold-primary)]/10 rounded-full blur-3xl" />
             <div className="absolute bottom-10 right-10 w-60 h-60 bg-white/5 rounded-full blur-3xl" />
 
             <div className="relative space-y-6 max-w-2xl mx-auto">
               <div className="inline-flex items-center gap-2 bg-white/10 border border-white/10 rounded-full px-4 py-1.5">
-                <Award className="w-4 h-4 text-[#CBA052]" />
+                <Award className="w-4 h-4 text-[var(--color-gold-primary)]" />
                 <span className="text-sm font-semibold text-white/80">Prototype Preview</span>
               </div>
 
@@ -537,14 +532,14 @@ export default function Landing() {
                 Explore our interactive prototype to see how JusKel turns sustainability data into real financing outcomes, from ESG scoring and lender-ready insights to funding matches and actionable improvement roadmaps.
               </p>
 
-              <div className="inline-flex items-center gap-2 bg-[#CBA052]/20 border border-[#CBA052]/30 rounded-full px-4 py-1.5">
-                <Clock className="w-3.5 h-3.5 text-[#CBA052]" />
-                <span className="text-xs font-medium text-[#CBA052]">Prototype preview — not the final product.</span>
+              <div className="inline-flex items-center gap-2 bg-[var(--color-gold-primary)]/20 border border-[var(--color-gold-primary)]/30 rounded-full px-4 py-1.5">
+                <Clock className="w-3.5 h-3.5 text-[var(--color-gold-primary)]" />
+                <span className="text-xs font-medium text-[var(--color-gold-primary)]">Prototype preview — not the final product.</span>
               </div>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                 <Link href="/dashboard">
-                  <Button className="h-14 px-8 text-base font-semibold bg-white text-[#1a2e2a] hover:bg-white/90 rounded-full shadow-lg gap-2">
+                  <Button className="h-14 px-8 text-base font-semibold bg-white text-[var(--color-text-dark)] hover:bg-white/90 rounded-full shadow-lg gap-2">
                     Explore Prototype
                     <ArrowUpRight className="w-5 h-5" />
                   </Button>
@@ -564,70 +559,64 @@ export default function Landing() {
       {/* Waitlist / Final CTA */}
       <section id="waitlist" className="py-20 md:py-28 bg-white">
         <div className="max-w-3xl mx-auto px-6 text-center space-y-8">
-          <div className="inline-flex items-center gap-2 bg-[#CBA052]/10 rounded-full px-5 py-2">
-            <Rocket className="w-4 h-4 text-[#CBA052]" />
-            <span className="text-sm font-bold text-[#CBA052]">Coming Soon</span>
+          <div className="inline-flex items-center gap-2 bg-[var(--color-gold-primary)]/10 rounded-full px-5 py-2">
+            <Rocket className="w-4 h-4 text-[var(--color-gold-primary)]" />
+            <span className="text-sm font-bold text-[var(--color-gold-primary)]">Coming Soon</span>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-bold text-[#1a2e2a] leading-tight">
+          <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-dark)] leading-tight">
             Be the first to unlock
-            <span className="text-[#2a7a6e]"> better finance through sustainability</span>
+            <span className="text-[var(--color-teal-data)]"> better finance through sustainability</span>
           </h2>
-          <p className="text-[#6b7c78] text-lg max-w-xl mx-auto">
+          <p className="text-[var(--color-text-body)] text-lg max-w-xl mx-auto">
             Join the waitlist to get early access when JusKel launches, helping SMEs turn verified sustainability progress into better funding outcomes.
           </p>
           
-          <p className="text-[#1a2e2a] text-base font-medium max-w-2xl mx-auto">
+          <p className="text-[var(--color-text-dark)] text-base font-medium max-w-2xl mx-auto">
             Built for SMEs. Designed with lenders and real credit workflows in mind.
           </p>
 
           <div className="flex items-center justify-center gap-6 pt-4 flex-wrap">
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#2a7a6e]" />
-              <span className="text-sm text-[#6b7c78]">Free for SMEs</span>
+              <CheckCircle2 className="w-4 h-4 text-[var(--color-teal-data)]" />
+              <span className="text-sm text-[var(--color-text-body)]">Free for SMEs</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#2a7a6e]" />
-              <span className="text-sm text-[#6b7c78]">No credit card required</span>
+              <CheckCircle2 className="w-4 h-4 text-[var(--color-teal-data)]" />
+              <span className="text-sm text-[var(--color-text-body)]">No credit card required</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#2a7a6e]" />
-              <span className="text-sm text-[#6b7c78]">Early access priority</span>
+              <CheckCircle2 className="w-4 h-4 text-[var(--color-teal-data)]" />
+              <span className="text-sm text-[var(--color-text-body)]">Early access priority</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0E2F2A] text-white py-12">
+      <footer className="bg-[var(--color-charcoal-teal)] text-white py-12">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 mb-10">
             <div className="space-y-4">
-              <div className="flex items-center gap-2.5">
-                <div className="w-9 h-9 bg-white rounded-lg flex items-center justify-center">
-                  <span className="font-bold text-[#0E2F2A] text-sm">J</span>
-                  <span className="font-bold text-[#CBA052] text-xs">K</span>
-                </div>
-                <span className="text-lg font-bold">JusKel</span>
-              </div>
+              <Logo href="/" showText={true} variant="dark" />
               <p className="text-sm text-white/50 leading-relaxed">
                 Bridging finance and sustainability for SMEs and corporates.
               </p>
               <p className="text-sm text-white/50 leading-relaxed">
                 Built for SMEs, lenders, and regulated financial institutions.
               </p>
-              <div className="inline-flex items-center gap-1.5 bg-[#CBA052]/20 rounded-full px-3 py-1">
-                <Rocket className="w-3 h-3 text-[#CBA052]" />
-                <span className="text-xs font-medium text-[#CBA052]">Coming Soon</span>
+              <div className="inline-flex items-center gap-1.5 bg-[var(--color-gold-primary)]/20 rounded-full px-3 py-1">
+                <Rocket className="w-3 h-3 text-[var(--color-gold-primary)]" />
+                <span className="text-xs font-medium text-[var(--color-gold-primary)]">Coming Soon</span>
               </div>
             </div>
             <div>
               <h4 className="font-semibold text-sm mb-4 text-white/80">Product</h4>
               <div className="space-y-2.5">
-                <p className="text-sm text-white/50">ESG Scoring <span className="text-[#CBA052] text-[10px]">SOON</span></p>
-                <p className="text-sm text-white/50">Funding Matches <span className="text-[#CBA052] text-[10px]">SOON</span></p>
-                <p className="text-sm text-white/50">Roadmaps <span className="text-[#CBA052] text-[10px]">SOON</span></p>
-                <p className="text-sm text-white/50">Carbon Tracking <span className="text-[#CBA052] text-[10px]">SOON</span></p>
+                <p className="text-sm text-white/50">ESG Scoring <span className="text-[var(--color-gold-primary)] text-[10px]">SOON</span></p>
+                <p className="text-sm text-white/50">Funding Matches <span className="text-[var(--color-gold-primary)] text-[10px]">SOON</span></p>
+                <p className="text-sm text-white/50">Roadmaps <span className="text-[var(--color-gold-primary)] text-[10px]">SOON</span></p>
+                <p className="text-sm text-white/50">Carbon Tracking <span className="text-[var(--color-gold-primary)] text-[10px]">SOON</span></p>
               </div>
             </div>
             <div>
@@ -653,11 +642,11 @@ export default function Landing() {
             <p className="text-sm text-white/40">&copy; 2026 JusKel Ltd. All rights reserved.</p>
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-1.5 bg-white/10 rounded-full px-3 py-1">
-                <Shield className="w-3.5 h-3.5 text-[#CBA052]" />
+                <Shield className="w-3.5 h-3.5 text-[var(--color-gold-primary)]" />
                 <span className="text-xs text-white/60">Bank-level encryption</span>
               </div>
               <div className="flex items-center gap-1.5 bg-white/10 rounded-full px-3 py-1">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#2a7a6e]" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-[var(--color-teal-data)]" />
                 <span className="text-xs text-white/60">Designed to align with FCA principles</span>
               </div>
             </div>
