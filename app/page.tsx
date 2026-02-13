@@ -188,10 +188,10 @@ export default function Landing() {
             </div>
 
             {/* Launch timeline */}
-            <div className="flex items-center justify-center gap-3 pt-2">
+            {/* <div className="flex items-center justify-center gap-3 pt-2">
               <Clock className="w-4 h-4 text-white/40" />
               <span className="text-sm text-white/50">Expected launch: Q3 2026</span>
-            </div>
+            </div> */}
           </div>
 
           {/* Vision Stats */}
