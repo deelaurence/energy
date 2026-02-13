@@ -43,11 +43,11 @@ export default function Login() {
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-3 text-xs">
-              <Link href="#login-companies-house" className="text-[var(--color-teal-data)] hover:text-[var(--color-teal-medium)]">
+              <Link href="/dashboard" className="text-[var(--color-teal-data)] hover:text-[var(--color-teal-medium)]">
                 Companies House
               </Link>
               <span className="text-[var(--color-border)]">•</span>
-              <Link href="#login-xero" className="text-[var(--color-teal-data)] hover:text-[var(--color-teal-medium)]">
+              <Link href="/dashboard" className="text-[var(--color-teal-data)] hover:text-[var(--color-teal-medium)]">
                 Xero/QuickBooks
               </Link>
               <span className="text-[var(--color-border)]">•</span>

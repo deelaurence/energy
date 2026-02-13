@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import { Home, BarChart3, FileText, Route, MoreHorizontal, ChevronDown, LogOut, Settings, User } from 'lucide-react'
+import { Home, BarChart3, PoundSterling, Route, MoreHorizontal, ChevronDown, LogOut, Settings, User } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover'
 import { Logo } from '@/components/logo'
@@ -11,7 +11,7 @@ import { cn } from '@/lib/utils'
 const navItems = [
   { href: '/dashboard', icon: Home, label: 'Home' },
   { href: '/scorecard', icon: BarChart3, label: 'Scorecard' },
-  { href: '/funding', icon: FileText, label: 'Funding' },
+  { href: '/funding', icon: PoundSterling, label: 'Funding' },
   { href: '/roadmap', icon: Route, label: 'Roadmap' },
   { href: '/more', icon: MoreHorizontal, label: 'More' },
 ]
