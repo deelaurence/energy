@@ -118,7 +118,7 @@ export default function Landing() {
   return (
     <div className="fixed inset-0 z-[100] overflow-y-auto bg-white">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-[var(--color-charcoal-teal)] border-b border-[var(--color-border)]">
+      <nav className="sticky top-0 z-50 bg-[#0B0F12] border-b border-[var(--color-border)]">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <Logo href="/" showText={true} variant="dark" hasBg={false} />
           <div className="hidden md:flex items-center gap-8">
@@ -173,10 +173,15 @@ export default function Landing() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-          
               <Link href="/dashboard">
                 <Button variant="outline" className="h-14 px-8 text-base font-semibold bg-white text-[var(--color-text-dark)] hover:bg-white/90 rounded-full shadow-lg shadow-black/20 gap-2">
                   Preview Prototype
+                  <ChevronRight className="w-5 h-5" />
+                </Button>
+              </Link>
+              <Link href="/splash">
+                <Button variant="outline" className="h-14 px-8 text-base font-semibold border-2 border-white/25 text-white hover:bg-white/10 rounded-full bg-transparent gap-2">
+                  Mobile Experience
                   <ChevronRight className="w-5 h-5" />
                 </Button>
               </Link>
@@ -542,12 +547,6 @@ export default function Landing() {
                   <Button className="h-14 px-8 text-base font-semibold bg-white text-[var(--color-text-dark)] hover:bg-white/90 rounded-full shadow-lg gap-2">
                     Explore Prototype
                     <ArrowUpRight className="w-5 h-5" />
-                  </Button>
-                </Link>
-                <Link href="/splash">
-                  <Button variant="outline" className="h-14 px-8 text-base font-semibold border-2 border-white/25 text-white hover:bg-white/10 rounded-full bg-transparent gap-2">
-                    Mobile Experience
-                    <ChevronRight className="w-5 h-5" />
                   </Button>
                 </Link>
               </div>

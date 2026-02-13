@@ -1,5 +1,6 @@
 'use client'
 
+import { Logo } from '@/components/logo'
 import Link from 'next/link'
 
 export default function Splash() {
@@ -28,14 +29,7 @@ export default function Splash() {
       <div className="relative h-full flex flex-col items-center justify-between py-16">
         {/* Logo Section */}
         <div className="flex-1 flex flex-col items-center justify-center space-y-4">
-          <div className="flex items-center gap-3">
-            <div className="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-lg">
-              <span className="font-bold text-[#0E2F2A] text-2xl">J</span>
-              <span className="font-bold text-[#CBA052] text-xl">K</span>
-            </div>
-            <span className="text-3xl font-bold text-white">JusKel</span>
-          </div>
-          <p className="text-white/70 text-base">Sustainability Finance Hub</p>
+          <Logo />
         </div>
 
         {/* Businessman placeholder area */}

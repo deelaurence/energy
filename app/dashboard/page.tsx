@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Bell, ArrowUpRight, TrendingDown, TrendingUp, Lightbulb, Plug, Zap } from 'lucide-react'
+import { Bell, ArrowUpRight, TrendingDown, TrendingUp, Lightbulb, Plug, Zap, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { MobileHeader } from '@/components/mobile-header'
@@ -41,27 +41,24 @@ export default function Dashboard() {
             {/* Left Column - Greeting & Buttons */}
             <div className="md:col-span-2 space-y-5">
               <div className="space-y-2">
-                <p className="text-sm text-[#6b7c78] font-medium">Good Morning,</p>
-                <div className="flex items-center gap-2">
-                  <h2 className="text-3xl md:text-4xl font-bold text-[#1a2e2a]">Greenfield Manufacturing Ltd</h2>
-                  <span className="text-3xl">👋</span>
-                </div>
+                <p className="text-sm text-[#6b7c78] font-medium">Good morning,</p>
+                <h2 className="text-3xl md:text-4xl font-bold text-[#1a2e2a]">Greenfield Manufacturing Ltd</h2>
                 <p className="text-[#6b7c78] text-sm leading-relaxed">
                   Here&apos;s how your sustainability progress is improving your access to finance.
                 </p>
               </div>
 
-              {/* Stacked full-width buttons */}
-              <div className="space-y-3">
+              {/* Primary actions */}
+              <div className="flex flex-col sm:flex-row gap-3">
                 <Link href="/funding">
-                  <Button className="w-full h-14 text-base font-semibold bg-[#1a2e2a] hover:bg-[#1a2e2a]/90 text-white rounded-full">
+                  <Button className="w-full sm:w-auto h-12 px-6 text-sm font-semibold bg-[#1a2e2a] hover:bg-[#1a2e2a]/90 text-white rounded-full">
                     Apply for funding
                   </Button>
                 </Link>
                 <Link href="/scorecard">
                   <Button
                     variant="outline"
-                    className="w-full h-14 text-base font-semibold border-2 border-[#d5d0c8] text-[#1a2e2a] rounded-full bg-[#e8e5df] hover:bg-[#ddd9d2]"
+                    className="w-full sm:w-auto h-12 px-6 text-sm font-semibold border-2 border-[#d5d0c8] text-[#1a2e2a] rounded-full bg-[#e8e5df] hover:bg-[#ddd9d2]"
                   >
                     Complete assessment
                   </Button>
@@ -69,7 +66,7 @@ export default function Dashboard() {
               </div>
             </div>
 
-            {/* Right Column - WHITE Score Card */}
+            {/* Right Column - Score Card */}
             <div className="md:col-span-1">
               <Link href="/scorecard">
                 <Card className="relative bg-white border-0 rounded-2xl p-6 shadow-sm overflow-hidden hover:shadow-md transition-shadow cursor-pointer">
@@ -82,30 +79,30 @@ export default function Dashboard() {
                     <ArrowUpRight className="w-5 h-5 text-[#1a2e2a]" />
                   </div>
 
-                  <div className="relative z-10 space-y-3">
-                    <p className="text-sm font-semibold text-[#1a2e2a]">Current Juskel Score</p>
-
-                    <div className="inline-flex items-center gap-1.5 bg-[#1a3a2a] text-white text-xs font-medium px-3 py-1.5 rounded-full">
-                      <TrendingUp className="w-3.5 h-3.5" />
-                      +8 in last 90 days
-                    </div>
-
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-5xl font-bold text-[#1a2e2a]">72</span>
-                      <span className="text-lg text-[#6b7c78]">/ 100</span>
-                    </div>
-
-                    {/* Progress Bar with Silver badge */}
-                    <div className="flex items-center gap-3">
-                      <div className="flex-1 h-2.5 bg-[#e0ded8] rounded-full overflow-hidden">
-                        <div className="h-full w-[72%] bg-[#2a7a6e] rounded-full"></div>
+                  <div className="relative z-10 space-y-4">
+                    <div className="flex items-center justify-between">
+                      <p className="text-sm font-semibold text-[#1a2e2a]">Current Juskel Score</p>
+                      <div className="inline-flex items-center gap-1.5 bg-[#1a3a2a] text-white text-xs font-medium px-3 py-1.5 rounded-full">
+                        <TrendingUp className="w-3.5 h-3.5" />
+                        +8 in last 90 days
                       </div>
-                      <span className="text-xs font-medium text-[#6b7c78] border border-[#d5d0c8] px-2.5 py-1 rounded">Silver</span>
                     </div>
 
-                    <p className="text-sm text-[#6b7c78]">
-                      Low Risk – financing likely
-                    </p>
+                    <div>
+                      <div className="flex items-baseline gap-2">
+                        <span className="text-5xl font-bold text-[#1a2e2a]">72</span>
+                        <span className="text-lg text-[#6b7c78]">/ 100</span>
+                      </div>
+                      <p className="text-sm text-[#6b7c78]">Silver</p>
+                    </div>
+
+                    <div className="flex items-center justify-between text-sm text-[#6b7c78]">
+                      <span className="inline-flex items-center gap-1 text-[#1a2e2a]">
+                        View full scorecard
+                        <ArrowUpRight className="w-4 h-4" />
+                      </span>
+                      <span>Low Risk - financing likely</span>
+                    </div>
                   </div>
                 </Card>
               </Link>
@@ -194,11 +191,9 @@ export default function Dashboard() {
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-xl font-bold text-[#1a2e2a]">Priority actions</h3>
               <Link href="/roadmap">
-                <Button variant="ghost" className="text-[#6b7c78] hover:text-[#1a2e2a] gap-2 px-0">
+                <Button variant="ghost" className="text-[#6b7c78] hover:text-[#1a2e2a] gap-1 px-0">
                   See all
-                  <div className="w-7 h-7 rounded-full border border-[#d5d0c8] flex items-center justify-center">
-                    <ArrowUpRight className="w-3.5 h-3.5" />
-                  </div>
+                  <ChevronRight className="w-4 h-4" />
                 </Button>
               </Link>
             </div>
@@ -217,12 +212,11 @@ export default function Dashboard() {
                     <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#e8e5df] text-xs font-medium text-[#4a5854]">0–3 months</span>
                     <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#fce4e4] text-xs font-medium text-[#d94a4a]">High impact</span>
                   </div>
-                  <Link href="/roadmap/1">
+                
                     <Button className="w-full h-11 bg-[#1a2e2a] hover:bg-[#1a2e2a]/90 text-white rounded-full font-semibold text-sm">
                       View action
                     </Button>
-                  </Link>
-                </div>
+                 </div>
               </Card>
 
               {/* Action 2 */}
@@ -237,11 +231,10 @@ export default function Dashboard() {
                     <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#e8e5df] text-xs font-medium text-[#4a5854]">3–12 months</span>
                     <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#fef9e7] text-xs font-medium text-[#b8860b]">Medium impact</span>
                   </div>
-                  <Link href="/roadmap/3">
                     <Button className="w-full h-11 bg-[#1a2e2a] hover:bg-[#1a2e2a]/90 text-white rounded-full font-semibold text-sm">
                       View action
                     </Button>
-                  </Link>
+                  
                 </div>
               </Card>
 
@@ -257,11 +250,10 @@ export default function Dashboard() {
                     <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#e8e5df] text-xs font-medium text-[#4a5854]">3–12 months</span>
                     <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#fef9e7] text-xs font-medium text-[#b8860b]">Medium impact</span>
                   </div>
-                  <Link href="/roadmap/2">
                     <Button className="w-full h-11 bg-[#1a2e2a] hover:bg-[#1a2e2a]/90 text-white rounded-full font-semibold text-sm">
                       View action
                     </Button>
-                  </Link>
+                
                 </div>
               </Card>
             </div>

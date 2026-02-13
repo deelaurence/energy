@@ -5,12 +5,22 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { Eye, EyeOff } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { getCompanyEmailError } from '@/lib/email-validation'
+import { Logo } from '@/components/logo'
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false)
+  const [email, setEmail] = useState('')
+  const [emailTouched, setEmailTouched] = useState(false)
   const router = useRouter()
+  const emailError = getCompanyEmailError(email)
+  const showEmailError = emailTouched && !!emailError
 
   const handleLogin = () => {
+    setEmailTouched(true)
+    if (!email.trim() || emailError) {
+      return
+    }
     router.push('/dashboard')
   }
 
@@ -20,14 +30,7 @@ export default function Login() {
         {/* Logo Header */}
         <div className="flex flex-col items-center pt-12 pb-8 px-6">
           <Link href="/" className="flex flex-col items-center">
-            <div className="flex items-center gap-3 mb-2 cursor-pointer hover:opacity-80 transition-opacity">
-              <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg">
-                <span className="font-bold text-[var(--color-charcoal-teal)] text-xl">J</span>
-                <span className="font-bold text-[var(--color-gold-primary)] text-lg">K</span>
-              </div>
-              <span className="text-2xl font-bold text-white">JusKel</span>
-            </div>
-            <p className="text-white/70 text-sm">Sustainability Finance Hub</p>
+            <Logo variant="light" hasBg={false} showText={true} />
           </Link>
         </div>
 
@@ -71,8 +74,22 @@ export default function Login() {
                 <input
                   type="email"
                   placeholder="username@email.com"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                  onBlur={() => setEmailTouched(true)}
+                  aria-invalid={showEmailError ? 'true' : 'false'}
+                  aria-describedby="login-email-help"
                   className="w-full h-12 px-4 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-light)]/50 text-[var(--color-text-dark)] placeholder:text-[var(--color-text-body)]/60 focus:outline-none focus:ring-2 focus:ring-[var(--color-teal-data)] focus:border-transparent text-sm"
                 />
+                {showEmailError ? (
+                  <p id="login-email-help" className="text-xs text-red-600">
+                    {emailError}
+                  </p>
+                ) : (
+                  <p id="login-email-help" className="text-xs text-[var(--color-text-body)]">
+                    Company emails only.
+                  </p>
+                )}
               </div>
 
               <div className="space-y-2">
