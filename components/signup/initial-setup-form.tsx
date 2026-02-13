@@ -11,9 +11,16 @@ import { getCompanyEmailError } from '@/lib/email-validation'
 export function InitialSetupForm() {
   const [email, setEmail] = useState('')
   const [emailTouched, setEmailTouched] = useState(false)
+  const [selectedConnections, setSelectedConnections] = useState<string[]>([])
   const router = useRouter()
   const emailError = getCompanyEmailError(email)
   const showEmailError = emailTouched && !!emailError
+
+  const toggleConnection = (key: string) => {
+    setSelectedConnections((prev) =>
+      prev.includes(key) ? prev.filter((item) => item !== key) : [...prev, key]
+    )
+  }
 
   const handleContinue = () => {
     setEmailTouched(true)
@@ -59,6 +66,19 @@ export function InitialSetupForm() {
               <p className="text-[#6b7c78] text-sm leading-relaxed">
                 Connect your data to see your Juskel (ESG) score and matched funding.
               </p>
+              <div className="flex flex-wrap items-center justify-center gap-3 text-xs">
+                <Link href="#signup-company-house" className="text-[#2a7a6e] hover:text-[#1a2e2a]">
+                  Companies House
+                </Link>
+                <span className="text-[#d5d0c8]">•</span>
+                <Link href="#signup-xero" className="text-[#2a7a6e] hover:text-[#1a2e2a]">
+                  Xero/QuickBooks
+                </Link>
+                <span className="text-[#d5d0c8]">•</span>
+                <Link href="#signup-open-banking" className="text-[#2a7a6e] hover:text-[#1a2e2a]">
+                  Open Banking
+                </Link>
+              </div>
             </div>
 
             {/* Form */}
@@ -145,10 +165,16 @@ export function InitialSetupForm() {
             </div>
 
             {/* Data Connection Section */}
-            <div className="space-y-4 pt-2">
+            <div id="signup-connect" className="space-y-4 pt-2">
               <h3 className="text-base font-bold text-[#1a2e2a]">Connect your data for instant ESG scoring</h3>
 
-              <Card className="p-4 border border-[#d5d0c8] rounded-xl bg-white hover:shadow-md transition-shadow cursor-pointer">
+              <Card
+                id="signup-xero"
+                onClick={() => toggleConnection('xero')}
+                className={`p-4 border rounded-xl bg-white hover:shadow-md transition-shadow cursor-pointer ${
+                  selectedConnections.includes('xero') ? 'border-[#2a7a6e] ring-2 ring-[#2a7a6e]/30' : 'border-[#d5d0c8]'
+                }`}
+              >
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 bg-[#e6f2ee] rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-[#2a7a6e] font-bold text-sm">XQ</span>
@@ -157,11 +183,22 @@ export function InitialSetupForm() {
                     <p className="font-medium text-[#1a2e2a] text-sm">Xero / QuickBooks</p>
                     <p className="text-xs text-[#6b7c78]">Connect your accounting data</p>
                   </div>
-                  <div className="w-5 h-5 border-2 border-[#d5d0c8] rounded" />
+                  <input
+                    type="checkbox"
+                    checked={selectedConnections.includes('xero')}
+                    onChange={() => toggleConnection('xero')}
+                    className="w-5 h-5 rounded border-[#d5d0c8] text-[#2a7a6e] focus:ring-[#2a7a6e]"
+                  />
                 </div>
               </Card>
 
-              <Card className="p-4 border border-[#d5d0c8] rounded-xl bg-white hover:shadow-md transition-shadow cursor-pointer">
+              <Card
+                id="signup-open-banking"
+                onClick={() => toggleConnection('open-banking')}
+                className={`p-4 border rounded-xl bg-white hover:shadow-md transition-shadow cursor-pointer ${
+                  selectedConnections.includes('open-banking') ? 'border-[#2a7a6e] ring-2 ring-[#2a7a6e]/30' : 'border-[#d5d0c8]'
+                }`}
+              >
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 bg-[#e6f2ee] rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-[#2a7a6e] font-bold text-sm">OB</span>
@@ -170,11 +207,22 @@ export function InitialSetupForm() {
                     <p className="font-medium text-[#1a2e2a] text-sm">Open Banking</p>
                     <p className="text-xs text-[#6b7c78]">Connect your bank account</p>
                   </div>
-                  <div className="w-5 h-5 border-2 border-[#d5d0c8] rounded" />
+                  <input
+                    type="checkbox"
+                    checked={selectedConnections.includes('open-banking')}
+                    onChange={() => toggleConnection('open-banking')}
+                    className="w-5 h-5 rounded border-[#d5d0c8] text-[#2a7a6e] focus:ring-[#2a7a6e]"
+                  />
                 </div>
               </Card>
 
-              <Card className="p-4 border border-[#d5d0c8] rounded-xl bg-white hover:shadow-md transition-shadow cursor-pointer">
+              <Card
+                id="signup-company-house"
+                onClick={() => toggleConnection('companies-house')}
+                className={`p-4 border rounded-xl bg-white hover:shadow-md transition-shadow cursor-pointer ${
+                  selectedConnections.includes('companies-house') ? 'border-[#2a7a6e] ring-2 ring-[#2a7a6e]/30' : 'border-[#d5d0c8]'
+                }`}
+              >
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 bg-[#e6f2ee] rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-[#2a7a6e] font-bold text-sm">CH</span>
@@ -183,7 +231,12 @@ export function InitialSetupForm() {
                     <p className="font-medium text-[#1a2e2a] text-sm">Companies House</p>
                     <p className="text-xs text-[#6b7c78]">Verify your company details</p>
                   </div>
-                  <div className="w-5 h-5 border-2 border-[#d5d0c8] rounded" />
+                  <input
+                    type="checkbox"
+                    checked={selectedConnections.includes('companies-house')}
+                    onChange={() => toggleConnection('companies-house')}
+                    className="w-5 h-5 rounded border-[#d5d0c8] text-[#2a7a6e] focus:ring-[#2a7a6e]"
+                  />
                 </div>
               </Card>
             </div>

@@ -43,7 +43,7 @@ export default function Splash() {
             {/* Start Now Button */}
             <Link href="/welcome">
               <div className="absolute bottom-16 right-[-20px] w-28 h-28 bg-white rounded-full flex items-center justify-center shadow-2xl hover:shadow-3xl hover:scale-105 transition-all cursor-pointer">
-                <span className="text-[#1a2e2a] font-bold text-base">Start now</span>
+                <span className="text-[#1a2e2a] font-bold text-base">Get Started</span>
               </div>
             </Link>
           </div>

@@ -42,9 +42,24 @@ export default function Login() {
               <p className="text-[var(--color-text-body)] text-sm">Create an account or log in to enter</p>
             </div>
 
+            <div className="flex flex-wrap items-center justify-center gap-3 text-xs">
+              <Link href="#login-companies-house" className="text-[var(--color-teal-data)] hover:text-[var(--color-teal-medium)]">
+                Companies House
+              </Link>
+              <span className="text-[var(--color-border)]">•</span>
+              <Link href="#login-xero" className="text-[var(--color-teal-data)] hover:text-[var(--color-teal-medium)]">
+                Xero/QuickBooks
+              </Link>
+              <span className="text-[var(--color-border)]">•</span>
+              <Link href="#login-email" className="text-[var(--color-teal-data)] hover:text-[var(--color-teal-medium)]">
+                Email login
+              </Link>
+            </div>
+
             {/* Social Login Buttons */}
-            <div className="space-y-3">
+            <div className="space-y-3" id="login-social">
               <Button
+                id="login-companies-house"
                 variant="outline"
                 onClick={handleLogin}
                 className="w-full h-13 text-base font-medium rounded-xl border-[var(--color-border)] text-[var(--color-text-dark)] bg-white hover:bg-[var(--color-bg-light)]"
@@ -52,6 +67,7 @@ export default function Login() {
                 Login with Companies House
               </Button>
               <Button
+                id="login-xero"
                 variant="outline"
                 onClick={handleLogin}
                 className="w-full h-13 text-base font-medium rounded-xl border-[var(--color-border)] text-[var(--color-text-dark)] bg-white hover:bg-[var(--color-bg-light)]"
@@ -68,7 +84,7 @@ export default function Login() {
             </div>
 
             {/* Email/Password Form */}
-            <div className="space-y-4">
+            <div className="space-y-4" id="login-email">
               <div className="space-y-2">
                 <label className="text-sm font-medium text-[var(--color-text-dark)]">Email address</label>
                 <input

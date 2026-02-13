@@ -158,9 +158,9 @@ export default function Dashboard() {
               <Card className="bg-white border-0 rounded-2xl p-7 shadow-sm hover:shadow-md transition-shadow cursor-pointer h-full">
                 <div className="flex items-start justify-between mb-1">
                   <h3 className="text-base font-semibold text-[#1a2e2a]">Carbon emissions</h3>
-                  <div className="flex items-center gap-1.5 bg-[#fce4e4] px-3 py-1 rounded-full">
-                    <TrendingDown className="w-3.5 h-3.5 text-[#d94a4a]" />
-                    <span className="text-xs font-bold text-[#d94a4a]">-31% this year</span>
+                  <div className="flex items-center bg-[#1a3a2a] text-white gap-1.5 px-3 py-1 rounded-full">
+                    <TrendingDown className="w-3.5 h-3.5 " />
+                    <span className="text-xs font-bold ">-31% this year</span>
                   </div>
                 </div>
                 <p className="text-sm text-[#6b7c78] mb-4">Current month: <span className="font-bold text-[#1a2e2a]">28 tCO₂e</span></p>

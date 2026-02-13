@@ -595,8 +595,8 @@ export default function Landing() {
       {/* Footer */}
       <footer className="bg-[var(--color-charcoal-teal)] text-white py-12">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 mb-10">
-            <div className="space-y-4">
+          <div className="grid gap-10 md:grid-cols-4 md:gap-12 items-start mb-10">
+            <div className="space-y-4 max-w-sm">
               <Logo href="/" showText={true} variant="dark" />
               <p className="text-sm text-white/50 leading-relaxed">
                 Bridging finance and sustainability for SMEs and corporates.
@@ -609,27 +609,27 @@ export default function Landing() {
                 <span className="text-xs font-medium text-[var(--color-gold-primary)]">Coming Soon</span>
               </div>
             </div>
-            <div>
+            <div className="space-y-4">
               <h4 className="font-semibold text-sm mb-4 text-white/80">Product</h4>
-              <div className="space-y-2.5">
+              <div className="space-y-3">
                 <p className="text-sm text-white/50">ESG Scoring <span className="text-[var(--color-gold-primary)] text-[10px]">SOON</span></p>
                 <p className="text-sm text-white/50">Funding Matches <span className="text-[var(--color-gold-primary)] text-[10px]">SOON</span></p>
                 <p className="text-sm text-white/50">Roadmaps <span className="text-[var(--color-gold-primary)] text-[10px]">SOON</span></p>
                 <p className="text-sm text-white/50">Carbon Tracking <span className="text-[var(--color-gold-primary)] text-[10px]">SOON</span></p>
               </div>
             </div>
-            <div>
+            <div className="space-y-4">
               <h4 className="font-semibold text-sm mb-4 text-white/80">Company</h4>
-              <div className="space-y-2.5">
+              <div className="space-y-3">
                 <p className="text-sm text-white/50 hover:text-white/70 cursor-pointer transition-colors">About Us</p>
                 <p className="text-sm text-white/50 hover:text-white/70 cursor-pointer transition-colors">Careers</p>
                 <p className="text-sm text-white/50 hover:text-white/70 cursor-pointer transition-colors">Press</p>
                 <p className="text-sm text-white/50 hover:text-white/70 cursor-pointer transition-colors">Contact</p>
               </div>
             </div>
-            <div>
+            <div className="space-y-4">
               <h4 className="font-semibold text-sm mb-4 text-white/80">Legal</h4>
-              <div className="space-y-2.5">
+              <div className="space-y-3">
                 <p className="text-sm text-white/50 hover:text-white/70 cursor-pointer transition-colors">Privacy Policy</p>
                 <p className="text-sm text-white/50 hover:text-white/70 cursor-pointer transition-colors">Terms of Service</p>
                 <p className="text-sm text-white/50 hover:text-white/70 cursor-pointer transition-colors">Cookie Policy</p>
@@ -637,9 +637,9 @@ export default function Landing() {
               </div>
             </div>
           </div>
-          <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-white/40">&copy; 2026 JusKel Ltd. All rights reserved.</p>
-            <div className="flex items-center gap-3">
+          <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-6">
+            <p className="text-sm text-white/40 text-center md:text-left">&copy; 2026 JusKel Ltd. All rights reserved.</p>
+            <div className="flex flex-wrap items-center justify-center md:justify-end gap-3">
               <div className="flex items-center gap-1.5 bg-white/10 rounded-full px-3 py-1">
                 <Shield className="w-3.5 h-3.5 text-[var(--color-gold-primary)]" />
                 <span className="text-xs text-white/60">Bank-level encryption</span>
