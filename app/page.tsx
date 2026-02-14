@@ -638,7 +638,7 @@ export default function Landing() {
             </div>
           </div>
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-6">
-            <p className="text-sm text-white/40 text-center md:text-left">&copy; 2026 JusKel Ltd. All rights reserved.</p>
+            <p className="text-sm text-white/40 text-center md:text-left">&copy; 2026 JusKel Holdings Ltd. All rights reserved.</p>
             <div className="flex flex-wrap items-center justify-center md:justify-end gap-3">
               <div className="flex items-center gap-1.5 bg-white/10 rounded-full px-3 py-1">
                 <Shield className="w-3.5 h-3.5 text-[var(--color-gold-primary)]" />
