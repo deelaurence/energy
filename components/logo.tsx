@@ -19,7 +19,7 @@ export function Logo({ className = '', href = '/', showText = true, onClick, var
       <img
         src="/logo.png"
         alt="JusKel Logo"
-        className="h-10"
+        className="h-10 sm:h-16 "
       />
       {/* {showText && <span className={`text-xl font-bold ${textColor}`}>JusKel</span>} */}
     </div>

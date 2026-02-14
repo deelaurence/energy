@@ -119,7 +119,7 @@ export default function Landing() {
     <div className="fixed inset-0 z-[100] overflow-y-auto bg-white">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-[#0B0F12] border-b border-[var(--color-border)]">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
           <Logo href="/" showText={true} variant="dark" hasBg={false} />
           <div className="hidden md:flex items-center gap-8">
             <a href="#vision" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Vision</a>
@@ -364,7 +364,7 @@ export default function Landing() {
 
             <div className="inline-flex items-center gap-2 bg-white rounded-full px-4 py-1.5  mt-10 mb-6">
               <Leaf className="w-4 h-4 text-[var(--color-teal-data)]" />
-              <span className="text-sm font-semibold text-[var(--color-teal-data)]">Our Vision</span>
+              <span className="text-sm font-semibold text-[var(--color-teal-data)]">Our Mission</span>
             </div>
             <p className="text-[var(--color-text-body)] text-lg leading-relaxed">
                 To make sustainability measurable, accessible, financeable, and profitable for all SMEs and corporates.
