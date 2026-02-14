@@ -108,9 +108,9 @@ const quotes = [
     role: 'Former Governor, Bank of England & UN Special Envoy for Climate Action',
   },
   {
-    quote: 'The transition to net zero is the greatest commercial opportunity of our time. The businesses that move first will be rewarded with cheaper capital and stronger growth.',
-    author: 'Larry Fink',
-    role: 'CEO, BlackRock',
+    quote: 'Sustainable finance is no longer a niche; it is the fundamental shift required to ensure the long-term health of both our planet and our global economy.',
+    author: 'Dr. Andrew Steer',
+    role: 'President & CEO, Bezos Earth Fund',
   },
 ]
 
